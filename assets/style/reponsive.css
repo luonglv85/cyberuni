@@ -5,6 +5,15 @@
         height: 32px;
         width: 145px;
     }
+
+    .banner__content {
+        width: 60%;
+        top: 30%;
+    }
+
+    .banner__title {
+        font-size: 41px;
+    }
 }
 
 @media(max-width: 768px) {
@@ -51,5 +60,20 @@
             transform: translateY(30px);
             opacity: 0;
         }
+    }
+
+    .menu {
+        height: 64px;
+    }
+
+    .menu-mb {
+        height: 68px;
+    }
+
+    .mb-menu__item p {
+        flex-grow: 1;
+        font-weight: 500;
+        font-size: 11px;
+        color: #353C46;
     }
 }
