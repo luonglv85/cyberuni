@@ -10,17 +10,15 @@
 
     <link rel="stylesheet" href="assets/style/style.css">
     <link rel="stylesheet" href="assets/style/reponsive.css" />
+    <link rel="stylesheet" href="assets/style/fonts-delayed.css" />
     <link rel="stylesheet" href="assets/plugins/bootstrap-5.3.3/bootstrap.min.css">
     <script src="assets/plugins/jquery/jquery-2.2.4.min.js"></script>
 
-    <meta name="title" content="My Portfolio - j-star-dev" />
-    <meta name="keywords" content="My Portfolio - j-star-dev" />
-    <meta name="description" content="My Portfolio - j-star-dev">
+    <meta name="title" content="CYBERUNI" />
+    <meta name="keywords" content="CYBERUNI" />
+    <meta name="description" content="CYBERUNI">
 
-    <!-- <script src="assets/plugins/swiper8.4.5/swiper-bundle.min.js"></script>
-    <link href="assets/plugins/swiper8.4.5/swiper-bundle.min.css" rel="stylesheet" /> -->
-
-    <title>My Portfolio - j-star-dev</title>
+    <title>CYBERUNI</title>
 
     <!--#region Google Transalte-->
     <script type="text/javascript">
@@ -35,36 +33,14 @@
             }, 'google_translate_element');
         }
     </script>
-    <!-- <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async></script> -->
+    <script type="text/javascript"
+        src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async></script>
     <!--#endregion-->
 
-    <!-- Async Load Scripts & Fonts -->
-    <script async>
-        function loadJsAsync(e, t) {
-            var n = document.createElement("script");
-            n.type = "text/javascript", n.src = e, n.defer = true, n.addEventListener("load", function (e) {
-                t(null, e)
-            }, !1), document.getElementsByTagName("head")[0].appendChild(n)
-        }
-
-        loadFontAsync = (fontSource) => {
-            let n = document.createElement("link");
-            n.rel = "stylesheet", n.href = fontSource, n.addEventListener("load", function () { }, !1), document.getElementsByTagName("head")[0].appendChild(n);
-        }
-
-        window.addEventListener("DOMContentLoaded", function () {
-            setTimeout(function () {
-                loadJsAsync("https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit", function () { });
-                loadFontAsync("assets/style/fonts-delayed.css");
-            }, 0)
-        }, !1);
-    </script>
-    <!-- Finish Load scripts -->
-
     <!--#region Schema-->
-    <script type="application/ld+json">
+    <!-- <script type="application/ld+json">
 
-    </script>
+    </script> -->
     <!--#endregion-->
 </head>
 
@@ -73,6 +49,12 @@
     <div id="btn-go-top" class="btn-go-top flex-center" onclick="goToTop();">
         <span></span>
     </div>
+
+    <script>
+        const goToTop = () => {
+            $("html, body").animate({ scrollTop: 0 }, 200);
+        }
+    </script>
     <!--#endregion-->
 
     <!--#region Header-->
@@ -141,25 +123,17 @@
         </div>
     </header>
 
-    <div class="menu-mb">
-
-    </div>
-
     <script>
         window.onscroll = function () { myFunction() };
 
         function myFunction() {
             if (window.pageYOffset > 0) {
-                // $("#header").attr("style", "height: fit-content; box-shadow: rgba(0, 0, 0, 0.25) 0px 3px 5px, rgba(0, 0, 0, 0.22) 0px 1px 2px;");
-                // $("#header__top").attr("style", "height: 0; opacity: 0");
                 $("#btn-go-top").addClass("opacity-100");
                 $("#scroll-ico").attr("is-show", false);
                 $("#menu").addClass("menu--scroll");
 
             }
             else {
-                // $("#header").removeAttr("style");
-                // $("#header__top").removeAttr("style");
                 $("#btn-go-top").removeClass("opacity-100");
                 $("#scroll-ico").attr("is-show", true);
                 $("#menu").removeClass("menu--scroll");
@@ -219,15 +193,10 @@
     </div> -->
     <!--#endregion-->
 
-
     <!--#region Using Google Translate-->
     <script>
-        // $(document).ready(function () {
-        //     $('html').attr('lang', 'vn');
-        // });
-
         var element = document.querySelector('html');
-        var observer = new MutationObserver(function (mutations) {
+        const obsLang = new MutationObserver(function (mutations) {
             mutations.forEach(function (mutation) {
                 if (mutation.type === "attributes") {
                     if ($('html').attr('lang') == 'en') {
@@ -249,78 +218,15 @@
                     if ($('html').attr('lang') == 'fr') {
                         $('.goog-te-combo').attr('style', 'background: url(assets/images/flags/flag-fr.svg) no-repeat; background-position: left 8px center; background-color: white; background-size: 25px auto;');
                     }
-
-                    // if ($('html').attr('lang') != 'en') {
-                    //     $('.goog-te-combo').attr('style', 'background: url(assets/images/flags/flag-' + $('html').attr('lang') + '.svg) no-repeat; background-position: left 8px center; background-color: white; background-size: 25px auto;');
-                    // }
-                    // else if ($('html').attr('lang') == 'en') {
-                    //     if ($('#google_translate_element').attr('lang') != 'en') {
-                    //         window.location.reload();
-                    //     }
-                    // }
                 }
             });
         });
 
-        observer.observe(element, {
-            attributes: true //configure it to listen to attribute changes
+        obsLang.observe(element, {
+            attributes: true
         });
 
         function goTrans() { $('#google_translate_element').attr('lang', $('html').attr('lang')); };
-    </script>
-    <!--#endregion-->
-
-    <!--#region Lazy Load Images-->
-    <script>
-        // Select all images which need lazy-loading
-        const lazyImages = document.querySelectorAll('[lazy]');
-
-        // Lazy load
-        const lazyImageObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach((entry) => {
-                // If image is about to be scroll on
-                if (entry.isIntersecting) {
-                    const lazyImage = entry.target;
-                    const src = lazyImage.dataset.src;
-
-                    lazyImage.tagName.toLowerCase() === 'img'
-                        // <img>: copy data-src -> src
-                        ? lazyImage.src = src
-
-                        // <div>: copy data-src -> background-image
-                        : lazyImage.style.backgroundImage = "url(\'" + src + "\')";
-
-                    // Remove attribute lazy
-                    lazyImage.removeAttribute('lazy');
-
-                    // Stop observe
-                    observer.unobserve(lazyImage);
-                }
-            });
-        });
-
-        // Observe each image and load
-        lazyImages.forEach((lazyImage) => {
-            lazyImageObserver.observe(lazyImage);
-        });
-    </script>
-    <!--#endregion-->
-
-    <!--#region General Functions-->
-    <script>
-        const goToTop = () => {
-            $("html, body").animate({ scrollTop: 0 }, 200);
-        }
-
-        // function openPopup(popup) {
-        //     $('body').attr('style', 'overflow: hidden');
-        //     $(popup).show().attr("aria-hidden", "false");
-        // }
-
-        // function closePopup(popup) {
-        //     $('body').removeAttr('style');
-        //     $(popup).hide().attr("aria-hidden", "true");
-        // }
     </script>
     <!--#endregion-->
 </body>
