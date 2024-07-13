@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+
+    <link rel="stylesheet" href="assets/style/style.css">
+    <link rel="stylesheet" href="assets/style/reponsive.css" />
+    <link rel="stylesheet" href="assets/plugins/bootstrap-5.3.3/bootstrap.min.css">
+    <script src="assets/plugins/jquery/jquery-3.7.1.min.js"></script>
+
+    <meta name="title" content="CYBERUNI" />
+    <meta name="keywords" content="CYBERUNI" />
+    <meta name="description" content="CYBERUNI">
+
+    <title>CYBERUNI</title>
+
+    <!--#region Google Transalte-->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'vi',
+                layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL,
+                autoDisplay: false,
+                includedLanguages: 'en,vi,fr,ja,ko',
+                gaTrack: true,
+                gaId: 'AIzaSyAuk_NhmtJvsJXMB9PAy-jCSGv5sVhhxvM'
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript"
+        src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async></script>
+    <!--#endregion-->
+
+    <!--#region Schema-->
+    <!-- <script type="application/ld+json">
+
+    </script> -->
+    <!--#endregion-->
+</head>
+
+<body>
+    <div class="bg-main"></div>
+
+    <!--#region Button go top-->
+    <div id="btn-go-top" class="btn-go-top flex-center" onclick="goToTop();">
+        <span></span>
+    </div>
+
+    <script>
+        const goToTop = () => {
+            $("html, body").animate({ scrollTop: 0 }, 200);
+        }
+    </script>
+    <!--#endregion-->
+
+    <!--#region Header-->
+    <header class="menu flex-align-center menu--scroll" id="menu">
+        <div class="container container--big p-0 flex-align-center position-relative">
+            <img src="assets/images/logo-default.svg" class="menu__logo" height="40" width="180" alt="logo" id="logo" />
+            <nav
+                class="menu__nav d-none d-xs-none d-sm-none d-md-flex d-lg-flex d-none d-sm-none d-md-none d-lg-none d-xl-flex">
+                <a class="menu__item">
+                    Thế mạnh
+                </a>
+                <a class="menu__item">
+                    Khách hàng
+                </a>
+                <a class="menu__item">
+                    Đối tác
+                </a>
+                <a class="menu__item">
+                    Về chúng tôi
+                </a>
+            </nav>
+
+            <nav class="menu-mb d-flex d-sm-flex d-md-flex d-lg-flex d-xl-none flex-align-center">
+                <div class="row p-0 m-0 w-100">
+                    <a class="mb-menu__item col">
+                        <p class="flex-center">Chính sách</p>
+                        <img class="flex-center" src="assets/images/icons/ico-menu-policy.svg" height="24" width="24"
+                            alt="policy">
+                    </a>
+                    <a class="mb-menu__item col">
+                        <p class="flex-center">Khóa học</p>
+                        <img class="flex-center" src="assets/images/icons/ico-menu-cource.svg" height="24" width="24"
+                            alt="course">
+                    </a>
+                    <a class="mb-menu__item col">
+                        <p class="flex-center">Về chúng tôi</p>
+                        <img class="flex-center" src="assets/images/icons/ico-menu-about.svg" height="24" width="24"
+                            alt="about">
+                    </a>
+                    <a class="mb-menu__item col">
+                        <p class="flex-center">Đăng nhập</p>
+                        <img class="flex-center" src="assets/images/icons/ico-menu-login.svg" height="24" width="24"
+                            alt="login">
+                    </a>
+                </div>
+            </nav>
+
+            <div class="menu__ops flex-align-center">
+                <div class="menu__search">
+                    <span><img src="assets/images/icons/ico-search.svg" height="24" width="24" alt="search"></span>
+                </div>
+
+                <div class="language-box">
+                    <div id="google_translate_element" onclick="goTrans()"></div>
+                </div>
+
+                <div class="btn-general menu__contact d-none d-sm-none d-md-none d-lg-none d-xl-block">
+                    Liên hệ
+                </div>
+
+                <div class="btn-general btn-general--gradient d-none d-sm-none d-md-none d-lg-none d-xl-flex">
+                    Đăng nhập
+                    <span><img src="assets/images/icons/ico-login.svg" height="" width="" alt="login"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        window.onscroll = function () { myFunction() };
+
+        function myFunction() {
+            if (window.pageYOffset > 0) {
+                $("#btn-go-top").addClass("opacity-100");
+            }
+            else {
+                $("#btn-go-top").removeClass("opacity-100");
+            }
+        }
+    </script>
+    <!--#endregion-->
+
+    <!--#region Body-->
+    <div class="body">
+        <div class="gap-reg-80"></div>
+
+        <div class="container">
+            <ul class="breadcrumb-nav">
+                <li><a href="/" aria-label="Trang chủ">Trang chủ</a></li>
+                <li><a href="#" aria-label="Về chúng tôi">Về chúng tôi</a></li>
+            </ul>
+        </div>
+
+        <div class="about-intro">
+            <img class="about-intro__bg-left" src="assets/images/2-about/rect-left.svg" alt="" height="" width="">
+            <img class="about-intro__bg-right" src="assets/images/2-about/rect-right.svg" alt="" height="" width="">
+
+            <div class="container">
+                <div class="about-intro__headline">
+                    Về chúng tôi
+                </div>
+                <div class="about-intro__desc">
+                    Chúng tôi là đơn vị tiên phong trong lĩnh vực giáo dục trực tuyến, cam kết mang lại trải nghiệm học
+                    tập
+                    và giảng dạy tốt nhất cho các trường đại học trên toàn thế giới.
+                </div>
+                <img class="about-intro__image" src="assets/images/2-about/about-intro.jpg" alt="" height="" width="">
+            </div>
+        </div>
+
+        <div class="gap-reg-50"></div>
+        <div class="gap-reg-50"></div>
+        <div class="gap-reg-50"></div>
+
+        <div class="container">
+            <div class="about-wwd row">
+                <div class="col-4 about-wwd__headline">Chúng tôi làm gì ?</div>
+                <div class="col-8 about-wwd__content">Thành lập với sứ mệnh cách mạng hóa giáo dục, chúng tôi cung cấp
+                    một nền tảng
+                    giáo dục trực tuyến toàn diện, hiện đại và dễ sử dụng. Với đội ngũ chuyên gia giàu kinh nghiệm
+                    và công nghệ tiên tiến, chúng tôi giúp các trường đại học nâng cao chất lượng giảng dạy, tối ưu
+                    hóa quản lý và mở rộng phạm vi tiếp cận học viên.
+
+                    Chúng tôi tự hào đã đồng hành cùng hàng trăm trường đại học và hàng ngàn giảng viên, học viên
+                    trên toàn cầu.</div>
+            </div>
+
+
+
+
+
+            <div class="gap-reg-50"></div>
+            <div class="gap-reg-50"></div>
+            <div class="gap-reg-50"></div>
+
+
+
+
+
+            <div class="about-misson row">
+                <div class="about-misson__headline">
+                    Sứ mệnh của chúng tôi là nâng cao chất lượng giáo dục
+                </div>
+                <div class="about-misson__image col-6">
+                    <img src="assets/images/2-about/about-mission-left.jpg" alt="" height="" width="">
+                </div>
+
+                <div class="flex-center col-6">
+                    <div class="about-misson__box d-block">
+                        <img src="assets/images/2-about/ico-mission.svg" alt="" height="" width="">
+                        <div class="about-misson__title">
+                            Sứ mệnh
+                        </div>
+                        Trở thành đơn vị dẫn đầu thị trường Việt Nam và vươn tầm ảnh hưởng ra toàn cầu, đóng góp vào sự
+                        chuyển đổi số hóa toàn diện và nâng cao chất lượng giảng dạy.
+                    </div>
+                </div>
+
+                <div class="flex-center col-6">
+                    <div class="about-misson__box d-block">
+                        <img src="assets/images/2-about/ico-vision.svg" alt="" height="" width="">
+                        <div class="about-misson__title">
+                            Tầm nhìn
+                        </div>
+                        Cung cấp những chương trình học đa dạng, linh hoạt và đặc biệt là tiết kiệm thời gian, chi phí
+                        tối
+                        đa cho những người có nhu cầu & mong muốn học tập.
+                    </div>
+                </div>
+
+                <div class="about-misson__image col-6">
+                    <img src="assets/images/2-about/about-misson-right.jpg" alt="" height="" width="">
+                </div>
+            </div>
+
+
+
+
+
+            <div class="gap-reg-50"></div>
+            <div class="gap-reg-50"></div>
+            <div class="gap-reg-50"></div>
+
+
+
+
+
+            <div class="about-value">
+                <div class="about-value__headline">
+                    Các giá trị cốt lõi của chúng tôi định hướng mọi hành động và quyết định
+                </div>
+
+                <div class="row">
+                    <div class="about-value__box flex-align-center col-6">
+                        <img class="about-value__icon" src="assets/images/2-about/ico-quality.svg" alt="" height=""
+                            width="">
+                        <div class="about-value__content">
+                            <div class="about-value__title">Chất lượng</div>
+                            <div class="about-value__text">Chúng tôi cam kết cung cấp các giải pháp giáo dục chất
+                                lượng cao, đảm bảo trải nghiệm
+                                học
+                                tập và giảng dạy tốt nhất.</div>
+                        </div>
+                    </div>
+                    <div class="about-value__box flex-align-center col-6">
+                        <img class="about-value__icon" src="assets/images/2-about/ico-changing.svg" alt="" height=""
+                            width="">
+                        <div class="about-value__content">
+                            <div class="about-value__title">Chất lượng</div>
+                            <div class="about-value__text">Chúng tôi cam kết cung cấp các giải pháp giáo dục chất
+                                lượng cao, đảm bảo trải nghiệm
+                                học
+                                tập và giảng dạy tốt nhất.</div>
+                        </div>
+                    </div>
+                    <div class="about-value__box flex-align-center col-6">
+                        <img class="about-value__icon" src="assets/images/2-about/ico-conscientious.svg" alt=""
+                            height="" width="">
+                        <div class="about-value__content">
+                            <div class="about-value__title">Chất lượng</div>
+                            <div class="about-value__text">Chúng tôi cam kết cung cấp các giải pháp giáo dục chất
+                                lượng cao, đảm bảo trải nghiệm
+                                học
+                                tập và giảng dạy tốt nhất.</div>
+                        </div>
+                    </div>
+                    <div class="about-value__box flex-align-center col-6">
+                        <img class="about-value__icon" src="assets/images/2-about/ico-cooperate.svg" alt="" height=""
+                            width="">
+                        <div class="about-value__content">
+                            <div class="about-value__title">Chất lượng</div>
+                            <div class="about-value__text">Chúng tôi cam kết cung cấp các giải pháp giáo dục chất
+                                lượng cao, đảm bảo trải nghiệm
+                                học
+                                tập và giảng dạy tốt nhất.</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+
+            <div class="gap-reg-50"></div>
+            <div class="gap-reg-50"></div>
+            <div class="gap-reg-50"></div>
+
+
+
+
+
+            <div class="about-lead">
+                <div class="about-lead__headline">Đội ngũ lãnh đạo của chúng tôi</div>
+                <div class="row">
+                    <div class="about-lead__box col-3">
+                        <img class="about-lead__avatar" src="assets/images/2-about/ico-mission.svg" alt="" height=""
+                            width="">
+                        <div class="about-lead__name">Họ tên</div>
+                        <div class="about-lead__role">Chức vụ</div>
+                    </div>
+                    <div class="about-lead__box col-3">
+                        <img class="about-lead__avatar" src="assets/images/2-about/ico-mission.svg" alt="" height=""
+                            width="">
+                        <div class="about-lead__name">Họ tên</div>
+                        <div class="about-lead__role">Chức vụ</div>
+                    </div>
+                    <div class="about-lead__box col-3">
+                        <img class="about-lead__avatar" src="assets/images/2-about/ico-mission.svg" alt="" height=""
+                            width="">
+                        <div class="about-lead__name">Họ tên</div>
+                        <div class="about-lead__role">Chức vụ</div>
+                    </div>
+                    <div class="about-lead__box col-3">
+                        <img class="about-lead__avatar" src="assets/images/2-about/ico-mission.svg" alt="" height=""
+                            width="">
+                        <div class="about-lead__name">Họ tên</div>
+                        <div class="about-lead__role">Chức vụ</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="gap-reg-50"></div>
+        <div class="gap-reg-50"></div>
+        <div class="gap-reg-50"></div>
+    </div>
+    <!--#endregion-->
+
+    <!--#region Footer-->
+    <!-- <div class="footer">
+        <div class="container container--big">
+            <div class="row">
+                <div class="col-3">
+                    1
+                </div>
+                <div class="col-1">
+                    2
+                </div>
+                <div class="col-2">
+                    3
+                </div>
+                <div class="col-3">
+                    4
+                </div>
+                <div class="col-2">
+                    5
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!--#endregion-->
+
+    <!--#region Using Google Translate-->
+    <script>
+        var element = document.querySelector('html');
+        const obsLang = new MutationObserver(function (mutations) {
+            mutations.forEach(function (mutation) {
+                if (mutation.type === "attributes") {
+                    if ($('html').attr('lang') == 'en') {
+                        $('.goog-te-combo').attr('style', 'background: url(assets/images/icons/flags/flag-en.svg) no-repeat; background-position: left 8px center; background-color: white; background-size: 25px auto;');
+                    }
+
+                    if ($('html').attr('lang') == 'vi') {
+                        $('.goog-te-combo').attr('style', 'background: url(assets/images/icons/flags/flag-vi.svg) no-repeat; background-position: left 8px center; background-color: white; background-size: 25px auto;');
+                    }
+
+                    if ($('html').attr('lang') == 'ko') {
+                        $('.goog-te-combo').attr('style', 'background: url(assets/images/icons/flags/flag-ko.svg) no-repeat; background-position: left 8px center; background-color: white; background-size: 25px auto;');
+                    }
+
+                    if ($('html').attr('lang') == 'ja') {
+                        $('.goog-te-combo').attr('style', 'background: url(assets/images/icons/flags/flag-ja.svg) no-repeat; background-position: left 8px center; background-color: white; background-size: 25px auto;');
+                    }
+
+                    if ($('html').attr('lang') == 'fr') {
+                        $('.goog-te-combo').attr('style', 'background: url(assets/images/icons/flags/flag-fr.svg) no-repeat; background-position: left 8px center; background-color: white; background-size: 25px auto;');
+                    }
+                }
+            });
+        });
+
+        obsLang.observe(element, {
+            attributes: true
+        });
+
+        function goTrans() { $('#google_translate_element').attr('lang', $('html').attr('lang')); };
+    </script>
+    <!--#endregion-->
+</body>
+
+</html>
