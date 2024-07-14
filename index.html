@@ -9,6 +9,7 @@
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
 
     <link rel="stylesheet" href="assets/style/style.css">
+    <link rel="stylesheet" href="assets/style/fonts.css">
     <link rel="stylesheet" href="assets/style/reponsive.css" />
     <link rel="stylesheet" href="assets/plugins/bootstrap-5.3.3/bootstrap.min.css">
     <script src="assets/plugins/jquery/jquery-3.7.1.min.js"></script>
@@ -129,13 +130,11 @@
 
         function myFunction() {
             if (window.pageYOffset > 0) {
-                $("#btn-go-top").addClass("opacity-100");
                 $("#scroll-ico").attr("is-show", false);
                 $("#menu").addClass("menu--scroll");
 
             }
             else {
-                $("#btn-go-top").removeClass("opacity-100");
                 $("#scroll-ico").attr("is-show", true);
                 $("#menu").removeClass("menu--scroll");
             }
@@ -166,15 +165,19 @@
 
 
 
+
+
         <div class="gap-reg-50"></div>
         <div class="gap-reg-50"></div>
         <div class="gap-reg-50"></div>
 
 
 
-        <div class="container container--big home-intro">
-            <div class="home-intro__title">CyberUni là gì ?</div>
-            <div class="home-intro__content">
+
+
+        <div class="container container--big reg-intro">
+            <div class="reg-intro__title">CyberUni là gì ?</div>
+            <div class="reg-intro__content">
                 <p>
                     Cyber Uni được thành lập với mục đích cung cấp giải pháp chuyển đổi số cho ngành giáo dục, đặc
                     biệt
@@ -216,61 +219,58 @@
 
 
         <div class="container container--big">
-            <div class="home-features">
-                <div class="home-features__title">
+            <div class="reg-features">
+                <div class="reg-features__title">
                     Nền tảng mang đến trải nghiệm học tập tốt nhất.
                 </div>
                 <div class="row">
                     <div class="col-12">
                         <div class="row">
                             <div class="col-4">
-                                <div class="home-features__box">
-                                    <div class="home-features__icon flex-center">
-                                        <img src="assets/images/icons/home-features/ico-watcher.svg" alt="" height=""
-                                            width="">
+                                <div class="reg-features__box">
+                                    <div class="reg-features__icon flex-center">
+                                        <img src="assets/images/1-home/ico-watcher.svg" alt="" height="" width="">
                                     </div>
 
-                                    <div class="home-features__name">Video HD chất lượng cao</div>
-                                    <div class="home-features__desc">Chất lượng video HD giúp sinh viên theo dõi bài
+                                    <div class="reg-features__name">Video HD chất lượng cao</div>
+                                    <div class="reg-features__desc">Chất lượng video HD giúp sinh viên theo dõi bài
                                         giảng rõ
                                         ràng
                                         và sắc nét, tạo điều kiện
                                         thuận
                                         lợi cho việc tiếp thu kiến thức, đảm bảo rằng nội dung hiệu quả</div>
-                                    <a class="home-features__link" href="#">Tìm hiểu thêm</a>
+                                    <a class="reg-features__link" href="#">Tìm hiểu thêm</a>
                                 </div>
                             </div>
 
                             <div class="col-4">
-                                <div class="home-features__box home-features__box--even">
-                                    <div class="home-features__icon home-features__icon--even flex-center">
-                                        <img src="assets/images/icons/home-features/ico-gear.svg" alt="" height=""
-                                            width="">
+                                <div class="reg-features__box reg-features__box--even">
+                                    <div class="reg-features__icon reg-features__icon--even flex-center">
+                                        <img src="assets/images/1-home/ico-gear.svg" alt="" height="" width="">
                                     </div>
-                                    <div class="home-features__name">Quản lý thông minh</div>
-                                    <div class="home-features__desc">Các tính năng phân tích dữ liệu học tập giúp tạo ra
+                                    <div class="reg-features__name">Quản lý thông minh</div>
+                                    <div class="reg-features__desc">Các tính năng phân tích dữ liệu học tập giúp tạo ra
                                         một môi
                                         trường học tập được cá nhân
                                         hóa, hỗ
                                         trợ sinh viên đạt được mục tiêu học tập của mình.</div>
-                                    <a class="home-features__link" href="#">Tìm hiểu thêm</a>
+                                    <a class="reg-features__link" href="#">Tìm hiểu thêm</a>
                                 </div>
                             </div>
 
                             <div class="col-4">
-                                <div class="home-features__box">
-                                    <div class="home-features__icon flex-center">
-                                        <img src="assets/images/icons/home-features/ico-pc.svg" alt="" height=""
-                                            width="">
+                                <div class="reg-features__box">
+                                    <div class="reg-features__icon flex-center">
+                                        <img src="assets/images/1-home/ico-pc.svg" alt="" height="" width="">
                                     </div>
-                                    <div class="home-features__name">Hỗ trợ đa nền tảng</div>
-                                    <div class="home-features__desc">Nền tảng của chúng tôi có thể tương thích với nhiều
+                                    <div class="reg-features__name">Hỗ trợ đa nền tảng</div>
+                                    <div class="reg-features__desc">Nền tảng của chúng tôi có thể tương thích với nhiều
                                         thiết
                                         bị và
                                         hệ điều hành khác nhau, bao
                                         gồm
                                         thiết bị như máy tính, máy tính bảng và điện thoại di động.</div>
-                                    <a class="home-features__link" href="#">Tìm hiểu thêm</a>
+                                    <a class="reg-features__link" href="#">Tìm hiểu thêm</a>
                                 </div>
                             </div>
                         </div>
@@ -288,15 +288,15 @@
 
 
         <div class="container container--big">
-            <div class="row home-benefits">
-                <div class="col-6 home-benefits__images">
+            <div class="row reg-benefits">
+                <div class="col-6 reg-benefits__images">
                     <div class="row">
                         <div class="col-4">
                             <img src="assets/images/1-home/3-benefits/rect-1.jpg" alt="" height="" width="">
                         </div>
                         <div class="col-4">
                             <img src="assets/images/1-home/3-benefits/rect-2.jpg" alt="" height="" width="">
-                            <div class="home-benefits__images--small">
+                            <div class="reg-benefits__images--small">
                                 <img src="assets/images/1-home/3-benefits/round-group.jpg" alt="" height="" width="">
                             </div>
                         </div>
@@ -305,65 +305,65 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-6 home-benefits__content">
-                    <div class="home-benefits__content-title">
+                <div class="col-6 reg-benefits__content">
+                    <div class="reg-benefits__content-title">
                         Lợi ích cho các trường đại học và giảng viên
                     </div>
-                    <div class="home-benefits__box flex-align-center">
-                        <div class="home-benefits__checkbox"></div>
+                    <div class="reg-benefits__box flex-align-center">
+                        <div class="reg-benefits__checkbox"></div>
                         <div class="">
-                            <div class="home-benefits__headline">
+                            <div class="reg-benefits__headline">
                                 Nâng cao chất lượng giảng dạy
                             </div>
-                            <div class="home-benefits__detail">
+                            <div class="reg-benefits__detail">
                                 Giảng viên có thể tạo ra các bài giảng chất lượng cao và hấp dẫn hơn.
                             </div>
                         </div>
                     </div>
 
-                    <div class="home-benefits__box flex-align-center">
-                        <div class="home-benefits__checkbox"></div>
+                    <div class="reg-benefits__box flex-align-center">
+                        <div class="reg-benefits__checkbox"></div>
                         <div class="">
-                            <div class="home-benefits__headline">
+                            <div class="reg-benefits__headline">
                                 Nâng cao chất lượng giảng dạy
                             </div>
-                            <div class="home-benefits__detail">
+                            <div class="reg-benefits__detail">
                                 Giảng viên có thể tạo ra các bài giảng chất lượng cao và hấp dẫn hơn.
                             </div>
                         </div>
                     </div>
 
-                    <div class="home-benefits__box flex-align-center">
-                        <div class="home-benefits__checkbox"></div>
+                    <div class="reg-benefits__box flex-align-center">
+                        <div class="reg-benefits__checkbox"></div>
                         <div class="">
-                            <div class="home-benefits__headline">
+                            <div class="reg-benefits__headline">
                                 Nâng cao chất lượng giảng dạy
                             </div>
-                            <div class="home-benefits__detail">
+                            <div class="reg-benefits__detail">
                                 Giảng viên có thể tạo ra các bài giảng chất lượng cao và hấp dẫn hơn.
                             </div>
                         </div>
                     </div>
 
-                    <div class="home-benefits__box flex-align-center">
-                        <div class="home-benefits__checkbox"></div>
+                    <div class="reg-benefits__box flex-align-center">
+                        <div class="reg-benefits__checkbox"></div>
                         <div class="">
-                            <div class="home-benefits__headline">
+                            <div class="reg-benefits__headline">
                                 Nâng cao chất lượng giảng dạy
                             </div>
-                            <div class="home-benefits__detail">
+                            <div class="reg-benefits__detail">
                                 Giảng viên có thể tạo ra các bài giảng chất lượng cao và hấp dẫn hơn.
                             </div>
                         </div>
                     </div>
 
-                    <div class="home-benefits__box flex-align-center">
-                        <div class="home-benefits__checkbox"></div>
+                    <div class="reg-benefits__box flex-align-center">
+                        <div class="reg-benefits__checkbox"></div>
                         <div class="">
-                            <div class="home-benefits__headline">
+                            <div class="reg-benefits__headline">
                                 Nâng cao chất lượng giảng dạy
                             </div>
-                            <div class="home-benefits__detail">
+                            <div class="reg-benefits__detail">
                                 Giảng viên có thể tạo ra các bài giảng chất lượng cao và hấp dẫn hơn.
                             </div>
                         </div>
@@ -384,25 +384,25 @@
 
 
 
-        <div class="home-faq">
-            <img class="home-faq__bg-corner left" src="assets/images/backgrounds/faq-bg-left.svg" alt="bg-left"
+        <div class="reg-faq">
+            <img class="reg-faq__bg-corner left" src="assets/images/backgrounds/faq-bg-left.svg" alt="bg-left"
                 height="100" width="100" />
-            <img class="home-faq__bg-corner right" src="assets/images/backgrounds/faq-bg-right.svg" alt="bg-right"
+            <img class="reg-faq__bg-corner right" src="assets/images/backgrounds/faq-bg-right.svg" alt="bg-right"
                 height="100" width="100" />
 
-            <div class="home-faq__container">
-                <div class="home-faq__headline">
+            <div class="reg-faq__container">
+                <div class="reg-faq__headline">
                     Câu hỏi thường gặp
                 </div>
 
-                <div class="home-faq__box show flex-align-center">
-                    <div class="home-faq__no flex-center">1</div>
+                <div class="reg-faq__box show flex-align-center">
+                    <div class="reg-faq__no flex-center">1</div>
 
-                    <div class="home-faq__question">
-                        <div class="home-faq__detail">Nền tảng này có đảm bảo bảo mật thông tin và dữ liệu của học
+                    <div class="reg-faq__question">
+                        <div class="reg-faq__detail">Nền tảng này có đảm bảo bảo mật thông tin và dữ liệu của học
                             viên
                             không?</div>
-                        <div class="home-faq__content">
+                        <div class="reg-faq__content">
                             Chúng tôi cam kết bảo vệ thông tin và dữ liệu của học viên bằng các biện pháp bảo mật
                             tiên
                             tiến,
@@ -410,17 +410,17 @@
                         </div>
                     </div>
 
-                    <div class="home-faq__show"></div>
+                    <div class="reg-faq__show"></div>
                 </div>
 
-                <div class="home-faq__box flex-align-center">
-                    <div class="home-faq__no flex-center">2</div>
+                <div class="reg-faq__box flex-align-center">
+                    <div class="reg-faq__no flex-center">2</div>
 
-                    <div class="home-faq__question">
-                        <div class="home-faq__detail">Nền tảng này có đảm bảo bảo mật thông tin và dữ liệu của học
+                    <div class="reg-faq__question">
+                        <div class="reg-faq__detail">Nền tảng này có đảm bảo bảo mật thông tin và dữ liệu của học
                             viên
                             không?</div>
-                        <div class="home-faq__content">
+                        <div class="reg-faq__content">
                             Chúng tôi cam kết bảo vệ thông tin và dữ liệu của học viên bằng các biện pháp bảo mật
                             tiên
                             tiến,
@@ -428,17 +428,17 @@
                         </div>
                     </div>
 
-                    <div class="home-faq__show"></div>
+                    <div class="reg-faq__show"></div>
                 </div>
 
-                <div class="home-faq__box flex-align-center">
-                    <div class="home-faq__no flex-center">3</div>
+                <div class="reg-faq__box flex-align-center">
+                    <div class="reg-faq__no flex-center">3</div>
 
-                    <div class="home-faq__question">
-                        <div class="home-faq__detail">Nền tảng này có đảm bảo bảo mật thông tin và dữ liệu của học
+                    <div class="reg-faq__question">
+                        <div class="reg-faq__detail">Nền tảng này có đảm bảo bảo mật thông tin và dữ liệu của học
                             viên
                             không?</div>
-                        <div class="home-faq__content">
+                        <div class="reg-faq__content">
                             Chúng tôi cam kết bảo vệ thông tin và dữ liệu của học viên bằng các biện pháp bảo mật
                             tiên
                             tiến,
@@ -446,17 +446,17 @@
                         </div>
                     </div>
 
-                    <div class="home-faq__show"></div>
+                    <div class="reg-faq__show"></div>
                 </div>
 
-                <div class="home-faq__box flex-align-center">
-                    <div class="home-faq__no flex-center">4</div>
+                <div class="reg-faq__box flex-align-center">
+                    <div class="reg-faq__no flex-center">4</div>
 
-                    <div class="home-faq__question">
-                        <div class="home-faq__detail">Nền tảng này có đảm bảo bảo mật thông tin và dữ liệu của học
+                    <div class="reg-faq__question">
+                        <div class="reg-faq__detail">Nền tảng này có đảm bảo bảo mật thông tin và dữ liệu của học
                             viên
                             không?</div>
-                        <div class="home-faq__content">
+                        <div class="reg-faq__content">
                             Chúng tôi cam kết bảo vệ thông tin và dữ liệu của học viên bằng các biện pháp bảo mật
                             tiên
                             tiến,
@@ -464,17 +464,17 @@
                         </div>
                     </div>
 
-                    <div class="home-faq__show"></div>
+                    <div class="reg-faq__show"></div>
                 </div>
 
-                <div class="home-faq__box flex-align-center">
-                    <div class="home-faq__no flex-center">5</div>
+                <div class="reg-faq__box flex-align-center">
+                    <div class="reg-faq__no flex-center">5</div>
 
-                    <div class="home-faq__question">
-                        <div class="home-faq__detail">Nền tảng này có đảm bảo bảo mật thông tin và dữ liệu của học
+                    <div class="reg-faq__question">
+                        <div class="reg-faq__detail">Nền tảng này có đảm bảo bảo mật thông tin và dữ liệu của học
                             viên
                             không?</div>
-                        <div class="home-faq__content">
+                        <div class="reg-faq__content">
                             Chúng tôi cam kết bảo vệ thông tin và dữ liệu của học viên bằng các biện pháp bảo mật
                             tiên
                             tiến,
@@ -482,10 +482,10 @@
                         </div>
                     </div>
 
-                    <div class="home-faq__show"></div>
+                    <div class="reg-faq__show"></div>
                 </div>
 
-                <div class="home-faq__contact">
+                <div class="reg-faq__contact">
                     Bạn cần hỗ trợ nhiều hơn? Liên hệ ngay: <span><a
                             href="mailto:contact@cyberuni.vn">contact@cyberuni.vn</a></span>
                 </div>
@@ -504,33 +504,33 @@
 
 
 
-        <div class="home-register">
-            <div class="home-register__headline">
+        <div class="reg-register">
+            <div class="reg-register__headline">
                 Đăng ký nhận dự án demo ngay hôm nay
             </div>
 
             <form class="row">
                 <div class="col-6">
-                    <input class="home-register__input" type="text" placeholder="Họ và tên *" />
+                    <input class="reg-register__input" type="text" placeholder="Họ và tên *" />
                 </div>
 
                 <div class="col-6">
-                    <input class="home-register__input" type="text" placeholder="Họ và tên *" />
+                    <input class="reg-register__input" type="text" placeholder="Họ và tên *" />
                 </div>
 
                 <div class="col-6">
-                    <input class="home-register__input" type="text" placeholder="Họ và tên *" />
+                    <input class="reg-register__input" type="text" placeholder="Họ và tên *" />
                 </div>
 
                 <div class="col-6">
-                    <input class="home-register__input" type="text" placeholder="Họ và tên *" />
+                    <input class="reg-register__input" type="text" placeholder="Họ và tên *" />
                 </div>
 
                 <div class="col-12">
-                    <textarea class="home-register__text" placeholder="Mô tả nhu cầu của bạn"></textarea>
+                    <textarea class="reg-register__text" placeholder="Mô tả nhu cầu của bạn"></textarea>
                 </div>
 
-                <div class="col-12 home-register__checkbox flex-align-center">
+                <div class="col-12 reg-register__checkbox flex-align-center">
                     <input type="checkbox" class="" />
                     <span>Tôi đồng ý chia sẻ thông tin và đồng ý với Chính sách bảo mật dữ liệu cá nhân</span>
                 </div>

@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+
+    <link rel="stylesheet" href="assets/style/style.css">
+    <link rel="stylesheet" href="assets/style/fonts.css">
+    <link rel="stylesheet" href="assets/style/reponsive.css" />
+    <link rel="stylesheet" href="assets/plugins/bootstrap-5.3.3/bootstrap.min.css">
+    <script src="assets/plugins/jquery/jquery-3.7.1.min.js"></script>
+
+    <meta name="title" content="CYBERUNI" />
+    <meta name="keywords" content="CYBERUNI" />
+    <meta name="description" content="CYBERUNI">
+
+    <title>CYBERUNI</title>
+
+    <!--#region Google Transalte-->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'vi',
+                layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL,
+                autoDisplay: false,
+                includedLanguages: 'en,vi,fr,ja,ko',
+                gaTrack: true,
+                gaId: 'AIzaSyAuk_NhmtJvsJXMB9PAy-jCSGv5sVhhxvM'
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript"
+        src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async></script>
+    <!--#endregion-->
+
+    <!--#region Schema-->
+    <!-- <script type="application/ld+json">
+
+    </script> -->
+    <!--#endregion-->
+</head>
+
+<body>
+    <div class="bg-main"></div>
+
+    <!--#region Header-->
+    <header class="menu menu--transparent flex-align-center" id="menu">
+        <div class="container container--big p-0 flex-align-center position-relative">
+            <img src="assets/images/logo-default.svg" class="menu__logo" height="40" width="180" alt="logo" id="logo" />
+            <nav
+                class="menu__nav d-none d-xs-none d-sm-none d-md-flex d-lg-flex d-none d-sm-none d-md-none d-lg-none d-xl-flex">
+                <a class="menu__item">
+                    Thế mạnh
+                </a>
+                <a class="menu__item">
+                    Khách hàng
+                </a>
+                <a class="menu__item">
+                    Đối tác
+                </a>
+                <a class="menu__item">
+                    Về chúng tôi
+                </a>
+            </nav>
+
+            <nav class="menu-mb d-flex d-sm-flex d-md-flex d-lg-flex d-xl-none flex-align-center">
+                <div class="row p-0 m-0 w-100">
+                    <a class="mb-menu__item col">
+                        <p class="flex-center">Chính sách</p>
+                        <img class="flex-center" src="assets/images/icons/ico-menu-policy.svg" height="24" width="24"
+                            alt="policy">
+                    </a>
+                    <a class="mb-menu__item col">
+                        <p class="flex-center">Khóa học</p>
+                        <img class="flex-center" src="assets/images/icons/ico-menu-cource.svg" height="24" width="24"
+                            alt="course">
+                    </a>
+                    <a class="mb-menu__item col">
+                        <p class="flex-center">Về chúng tôi</p>
+                        <img class="flex-center" src="assets/images/icons/ico-menu-about.svg" height="24" width="24"
+                            alt="about">
+                    </a>
+                    <a class="mb-menu__item col">
+                        <p class="flex-center">Đăng nhập</p>
+                        <img class="flex-center" src="assets/images/icons/ico-menu-login.svg" height="24" width="24"
+                            alt="login">
+                    </a>
+                </div>
+            </nav>
+
+            <div class="menu__ops flex-align-center">
+                <div class="menu__search">
+                    <span><img src="assets/images/icons/ico-search.svg" height="24" width="24" alt="search"></span>
+                </div>
+
+                <div class="language-box">
+                    <div id="google_translate_element" onclick="goTrans()"></div>
+                </div>
+
+                <div class="btn-general menu__contact d-none d-sm-none d-md-none d-lg-none d-xl-block">
+                    Liên hệ
+                </div>
+
+                <div class="btn-general btn-general--gradient d-none d-sm-none d-md-none d-lg-none d-xl-flex">
+                    Đăng nhập
+                    <span><img src="assets/images/icons/ico-login.svg" height="" width="" alt="login"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        window.onscroll = function () { myFunction() };
+
+        function myFunction() {
+            if (window.pageYOffset > 0) {
+                $("#menu").removeClass("menu--transparent");
+            }
+            else {
+                $("#menu").addClass("menu--transparent");
+            }
+        }
+    </script>
+    <!--#endregion-->
+
+    <!--#region Body-->
+    <div class="body">
+        <div class="search-banner">
+            <div class="search-banner__bg"></div>
+
+            <div class="container">
+                <ul class="breadcrumb-nav">
+                    <li><a href="/" aria-label="Trang chủ">Trang chủ</a></li>
+                    <li><a href="#" aria-label="Liên hệ">Liên hệ</a></li>
+                </ul>
+
+                <div class="search-banner__box">
+                    <div class="search-banner__headline">
+                        Thế mạnh của chúng tôi
+                    </div>
+                    <div class="search-banner__content">
+                        Chúng tôi tự hào về khả năng cung cấp nền tảng giáo dục trực tuyến tiên tiến, với đội ngũ chuyên
+                        gia giàu kinh nghiệm và công nghệ hiện đại.
+                    </div>
+                    <div class="flex-center">
+                        <div class="btn-general">Liên hệ ngay</div>
+                        <div class="btn-general">Xem demo</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="gap-reg-50"></div>
+        <div class="gap-reg-50"></div>
+
+
+
+
+
+        <div class="container strength-reasons">
+            <div class="strength-reasons__headline">
+                5 lý do để chọn Cyber Uni:
+            </div>
+
+            <div class="row flex-center">
+                <div class="col-4">
+                    <div class="strength-reasons__box flex-center">
+                        <div>
+                            <img class="strength-reasons__image" src="assets/images/5-strength/ico-1.svg" alt=""
+                                height="" width="">
+                            <div class="strength-reasons__title">Đội ngũ hàng đầu</div>
+                            <div class="strength-content">Chúng tôi tự hào có đội ngũ chuyên gia tâm huyết với hơn 15
+                                năm
+                                kinh
+                                nghiệm triển khai dự án. </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="strength-reasons__box flex-center">
+                        <div>
+                            <img class="strength-reasons__image" src="assets/images/5-strength/ico-2.svg" alt=""
+                                height="" width="">
+                            <div class="strength-reasons__title">Đội ngũ hàng đầu</div>
+                            <div class="strength-content">Chúng tôi tự hào có đội ngũ chuyên gia tâm huyết với hơn 15
+                                năm
+                                kinh
+                                nghiệm triển khai dự án. </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="strength-reasons__box flex-center">
+                        <div>
+                            <img class="strength-reasons__image" src="assets/images/5-strength/ico-3.svg" alt=""
+                                height="" width="">
+                            <div class="strength-reasons__title">Đội ngũ hàng đầu</div>
+                            <div class="strength-content">Chúng tôi tự hào có đội ngũ chuyên gia tâm huyết với hơn 15
+                                năm
+                                kinh
+                                nghiệm triển khai dự án. </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="strength-reasons__box flex-center">
+                        <div>
+                            <img class="strength-reasons__image" src="assets/images/5-strength/ico-4.svg" alt=""
+                                height="" width="">
+                            <div class="strength-reasons__title">Đội ngũ hàng đầu</div>
+                            <div class="strength-content">Chúng tôi tự hào có đội ngũ chuyên gia tâm huyết với hơn 15
+                                năm
+                                kinh
+                                nghiệm triển khai dự án. </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="strength-reasons__box flex-center">
+                        <div>
+                            <img class="strength-reasons__image" src="assets/images/5-strength/ico-5.svg" alt=""
+                                height="" width="">
+                            <div class="strength-reasons__title">Đội ngũ hàng đầu</div>
+                            <div class="strength-content">Chúng tôi tự hào có đội ngũ chuyên gia tâm huyết với hơn 15
+                                năm
+                                kinh
+                                nghiệm triển khai dự án. </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="gap-reg-50"></div>
+        <div class="gap-reg-50"></div>
+        <div class="gap-reg-50"></div>
+
+
+
+
+
+        <div class="container">
+            <div class="row reg-benefits">
+                <div class="col-6 reg-benefits__images">
+                    <div class="row">
+                        <div class="col-4">
+                            <img src="assets/images/1-home/3-benefits/rect-1.jpg" alt="" height="" width="">
+                        </div>
+                        <div class="col-4">
+                            <img src="assets/images/1-home/3-benefits/rect-2.jpg" alt="" height="" width="">
+                            <div class="reg-benefits__images--small">
+                                <img src="assets/images/1-home/3-benefits/round-group.jpg" alt="" height="" width="">
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <img src="assets/images/1-home/3-benefits/rect-3.jpg" alt="" height="" width="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 reg-benefits__content">
+                    <div class="reg-benefits__content-title">
+                        Lợi ích cho các trường đại học và giảng viên
+                    </div>
+                    <div class="reg-benefits__box flex-align-center">
+                        <div class="reg-benefits__checkbox"></div>
+                        <div class="">
+                            <div class="reg-benefits__headline">
+                                Nâng cao chất lượng giảng dạy
+                            </div>
+                            <div class="reg-benefits__detail">
+                                Giảng viên có thể tạo ra các bài giảng chất lượng cao và hấp dẫn hơn.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="reg-benefits__box flex-align-center">
+                        <div class="reg-benefits__checkbox"></div>
+                        <div class="">
+                            <div class="reg-benefits__headline">
+                                Nâng cao chất lượng giảng dạy
+                            </div>
+                            <div class="reg-benefits__detail">
+                                Giảng viên có thể tạo ra các bài giảng chất lượng cao và hấp dẫn hơn.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="reg-benefits__box flex-align-center">
+                        <div class="reg-benefits__checkbox"></div>
+                        <div class="">
+                            <div class="reg-benefits__headline">
+                                Nâng cao chất lượng giảng dạy
+                            </div>
+                            <div class="reg-benefits__detail">
+                                Giảng viên có thể tạo ra các bài giảng chất lượng cao và hấp dẫn hơn.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="reg-benefits__box flex-align-center">
+                        <div class="reg-benefits__checkbox"></div>
+                        <div class="">
+                            <div class="reg-benefits__headline">
+                                Nâng cao chất lượng giảng dạy
+                            </div>
+                            <div class="reg-benefits__detail">
+                                Giảng viên có thể tạo ra các bài giảng chất lượng cao và hấp dẫn hơn.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="reg-benefits__box flex-align-center">
+                        <div class="reg-benefits__checkbox"></div>
+                        <div class="">
+                            <div class="reg-benefits__headline">
+                                Nâng cao chất lượng giảng dạy
+                            </div>
+                            <div class="reg-benefits__detail">
+                                Giảng viên có thể tạo ra các bài giảng chất lượng cao và hấp dẫn hơn.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="gap-reg-50"></div>
+        <div class="gap-reg-50"></div>
+        <div class="gap-reg-50"></div>
+
+
+
+
+
+        <div class="container">
+            <div class="reg-people">
+                <div class="reg-people__headline">Đội ngũ lãnh đạo của chúng tôi</div>
+                <div class="row">
+                    <div class="reg-people__box col-3">
+                        <img class="reg-people__avatar" src="assets/images/2-about/ico-mission.svg" alt="" height=""
+                            width="">
+                        <div class="reg-people__name">Họ tên</div>
+                        <div class="reg-people__role">Chức vụ</div>
+                    </div>
+                    <div class="reg-people__box col-3">
+                        <img class="reg-people__avatar" src="assets/images/2-about/ico-mission.svg" alt="" height=""
+                            width="">
+                        <div class="reg-people__name">Họ tên</div>
+                        <div class="reg-people__role">Chức vụ</div>
+                    </div>
+                    <div class="reg-people__box col-3">
+                        <img class="reg-people__avatar" src="assets/images/2-about/ico-mission.svg" alt="" height=""
+                            width="">
+                        <div class="reg-people__name">Họ tên</div>
+                        <div class="reg-people__role">Chức vụ</div>
+                    </div>
+                    <div class="reg-people__box col-3">
+                        <img class="reg-people__avatar" src="assets/images/2-about/ico-mission.svg" alt="" height=""
+                            width="">
+                        <div class="reg-people__name">Họ tên</div>
+                        <div class="reg-people__role">Chức vụ</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="gap-reg-50"></div>
+        <div class="gap-reg-50"></div>
+        <div class="gap-reg-50"></div>
+
+
+
+
+
+        <div class="reg-register">
+            <div class="reg-register__headline">
+                Đăng ký nhận dự án demo ngay hôm nay
+            </div>
+
+            <form class="row">
+                <div class="col-6">
+                    <input class="reg-register__input" type="text" placeholder="Họ và tên *" />
+                </div>
+
+                <div class="col-6">
+                    <input class="reg-register__input" type="text" placeholder="Họ và tên *" />
+                </div>
+
+                <div class="col-6">
+                    <input class="reg-register__input" type="text" placeholder="Họ và tên *" />
+                </div>
+
+                <div class="col-6">
+                    <input class="reg-register__input" type="text" placeholder="Họ và tên *" />
+                </div>
+
+                <div class="col-12">
+                    <textarea class="reg-register__text" placeholder="Mô tả nhu cầu của bạn"></textarea>
+                </div>
+
+                <div class="col-12 reg-register__checkbox flex-align-center">
+                    <input type="checkbox" class="" />
+                    <span>Tôi đồng ý chia sẻ thông tin và đồng ý với Chính sách bảo mật dữ liệu cá nhân</span>
+                </div>
+
+                <div>
+                    <button class="btn-general btn-general--gradient w-100" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+
+
+    </div>
+
+
+
+    <div class="gap-reg-50"></div>
+    <div class="gap-reg-50"></div>
+    <div class="gap-reg-50"></div>
+
+    </div>
+    <!--#endregion-->
+
+    <!--#region Footer-->
+    <!-- <div class="footer">
+        <div class="container container--big">
+            <div class="row">
+                <div class="col-3">
+                    1
+                </div>
+                <div class="col-1">
+                    2
+                </div>
+                <div class="col-2">
+                    3
+                </div>
+                <div class="col-3">
+                    4
+                </div>
+                <div class="col-2">
+                    5
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!--#endregion-->
+
+    <!--#region Using Google Translate-->
+    <script>
+        var element = document.querySelector('html');
+        const obsLang = new MutationObserver(function (mutations) {
+            mutations.forEach(function (mutation) {
+                if (mutation.type === "attributes") {
+                    if ($('html').attr('lang') == 'en') {
+                        $('.goog-te-combo').attr('style', 'background: url(assets/images/icons/flags/flag-en.svg) no-repeat; background-position: left 8px center; background-color: white; background-size: 25px auto;');
+                    }
+
+                    if ($('html').attr('lang') == 'vi') {
+                        $('.goog-te-combo').attr('style', 'background: url(assets/images/icons/flags/flag-vi.svg) no-repeat; background-position: left 8px center; background-color: white; background-size: 25px auto;');
+                    }
+
+                    if ($('html').attr('lang') == 'ko') {
+                        $('.goog-te-combo').attr('style', 'background: url(assets/images/icons/flags/flag-ko.svg) no-repeat; background-position: left 8px center; background-color: white; background-size: 25px auto;');
+                    }
+
+                    if ($('html').attr('lang') == 'ja') {
+                        $('.goog-te-combo').attr('style', 'background: url(assets/images/icons/flags/flag-ja.svg) no-repeat; background-position: left 8px center; background-color: white; background-size: 25px auto;');
+                    }
+
+                    if ($('html').attr('lang') == 'fr') {
+                        $('.goog-te-combo').attr('style', 'background: url(assets/images/icons/flags/flag-fr.svg) no-repeat; background-position: left 8px center; background-color: white; background-size: 25px auto;');
+                    }
+                }
+            });
+        });
+
+        obsLang.observe(element, {
+            attributes: true
+        });
+
+        function goTrans() { $('#google_translate_element').attr('lang', $('html').attr('lang')); };
+    </script>
+    <!--#endregion-->
+</body>
+
+</html>

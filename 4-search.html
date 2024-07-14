@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+
+    <link rel="stylesheet" href="assets/style/style.css">
+    <link rel="stylesheet" href="assets/style/fonts.css">
+    <link rel="stylesheet" href="assets/style/reponsive.css" />
+    <link rel="stylesheet" href="assets/plugins/bootstrap-5.3.3/bootstrap.min.css">
+    <script src="assets/plugins/jquery/jquery-3.7.1.min.js"></script>
+
+    <meta name="title" content="CYBERUNI" />
+    <meta name="keywords" content="CYBERUNI" />
+    <meta name="description" content="CYBERUNI">
+
+    <title>CYBERUNI</title>
+
+    <!--#region Google Transalte-->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'vi',
+                layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL,
+                autoDisplay: false,
+                includedLanguages: 'en,vi,fr,ja,ko',
+                gaTrack: true,
+                gaId: 'AIzaSyAuk_NhmtJvsJXMB9PAy-jCSGv5sVhhxvM'
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript"
+        src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async></script>
+    <!--#endregion-->
+
+    <!--#region Schema-->
+    <!-- <script type="application/ld+json">
+
+    </script> -->
+    <!--#endregion-->
+</head>
+
+<body>
+    <div class="bg-main"></div>
+
+    <!--#region Header-->
+    <header class="menu menu--transparent flex-align-center" id="menu">
+        <div class="container container--big p-0 flex-align-center position-relative">
+            <img src="assets/images/logo-default.svg" class="menu__logo" height="40" width="180" alt="logo" id="logo" />
+            <nav
+                class="menu__nav d-none d-xs-none d-sm-none d-md-flex d-lg-flex d-none d-sm-none d-md-none d-lg-none d-xl-flex">
+                <a class="menu__item">
+                    Thế mạnh
+                </a>
+                <a class="menu__item">
+                    Khách hàng
+                </a>
+                <a class="menu__item">
+                    Đối tác
+                </a>
+                <a class="menu__item">
+                    Về chúng tôi
+                </a>
+            </nav>
+
+            <nav class="menu-mb d-flex d-sm-flex d-md-flex d-lg-flex d-xl-none flex-align-center">
+                <div class="row p-0 m-0 w-100">
+                    <a class="mb-menu__item col">
+                        <p class="flex-center">Chính sách</p>
+                        <img class="flex-center" src="assets/images/icons/ico-menu-policy.svg" height="24" width="24"
+                            alt="policy">
+                    </a>
+                    <a class="mb-menu__item col">
+                        <p class="flex-center">Khóa học</p>
+                        <img class="flex-center" src="assets/images/icons/ico-menu-cource.svg" height="24" width="24"
+                            alt="course">
+                    </a>
+                    <a class="mb-menu__item col">
+                        <p class="flex-center">Về chúng tôi</p>
+                        <img class="flex-center" src="assets/images/icons/ico-menu-about.svg" height="24" width="24"
+                            alt="about">
+                    </a>
+                    <a class="mb-menu__item col">
+                        <p class="flex-center">Đăng nhập</p>
+                        <img class="flex-center" src="assets/images/icons/ico-menu-login.svg" height="24" width="24"
+                            alt="login">
+                    </a>
+                </div>
+            </nav>
+
+            <div class="menu__ops flex-align-center">
+                <div class="menu__search">
+                    <span><img src="assets/images/icons/ico-search.svg" height="24" width="24" alt="search"></span>
+                </div>
+
+                <div class="language-box">
+                    <div id="google_translate_element" onclick="goTrans()"></div>
+                </div>
+
+                <div class="btn-general menu__contact d-none d-sm-none d-md-none d-lg-none d-xl-block">
+                    Liên hệ
+                </div>
+
+                <div class="btn-general btn-general--gradient d-none d-sm-none d-md-none d-lg-none d-xl-flex">
+                    Đăng nhập
+                    <span><img src="assets/images/icons/ico-login.svg" height="" width="" alt="login"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        window.onscroll = function () { myFunction() };
+
+        function myFunction() {
+            if (window.pageYOffset > 0) {
+                $("#menu").removeClass("menu--transparent");
+            }
+            else {
+                $("#menu").addClass("menu--transparent");
+            }
+        }
+    </script>
+    <!--#endregion-->
+
+    <!--#region Body-->
+    <div class="body">
+        <div class="search-banner">
+            <div class="search-banner__bg"></div>
+
+            <div class="container">
+                <ul class="breadcrumb-nav">
+                    <li><a href="/" aria-label="Trang chủ">Trang chủ</a></li>
+                    <li><a href="#" aria-label="Liên hệ">Liên hệ</a></li>
+                </ul>
+
+                <div class="search-banner__box">
+                    <div class="search-banner__headline">
+                        Tìm kiếm
+                    </div>
+                    <div class="search-banner__content">
+                        Nhập từ khóa vào ô bên dưới để tìm kiếm thông tin bạn cần. Hệ thống của chúng tôi
+                        sẽ giúp bạn nhanh chóng tìm thấy các bài viết, tài liệu, và thông tin liên quan một cách dễ
+                        dàng.
+                    </div>
+                    <div class="search-banner__input-box">
+                        <input class="search-banner__input" type="text" placeholder="Nhập nội dung bạn muốn tìm kiếm">
+                        <div class="btn-general btn-general--gradient">Tìm kiếm</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="gap-reg-50"></div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-3 search-filter">
+                    <div>
+                        <div class="search-filter__title">Lọc theo</div>
+                        <div class="search-filter__category">Khóa học</div>
+
+                        <div>
+                            <div class="search-filter__option flex-align-center">
+                                <input type="checkbox">
+                                Công nghệ thông tin
+                            </div>
+                            <div class="search-filter__option flex-align-center">
+                                <input type="checkbox">
+                                Công nghệ thông tin
+                            </div>
+                            <div class="search-filter__option flex-align-center">
+                                <input type="checkbox">
+                                Công nghệ thông tin
+                            </div>
+                            <div class="search-filter__option flex-align-center">
+                                <input type="checkbox">
+                                Công nghệ thông tin
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="search-filter__border"></div>
+
+                    <div>
+                        <div class="search-filter__title">Tag liên quan</div>
+
+                        <div class="search-filter__tag-box">
+                            <span class="search-filter__tag">Giáo dục</span>
+                            <span class="search-filter__tag">Văn hóa</span>
+                            <span class="search-filter__tag">Quản trị kinh doanh</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-9 search-result">
+                    <div class="search-result__keyword">
+                        Kết quả tìm kiếm cho từ khóa: <span>Khóa học</span>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="search-result__item">
+                                <img class="search-result__image" src="assets/images/4-search/rect-1.jpg" alt=""
+                                    height="" width="">
+                                <div class="search-result__category">Truyền thông</div>
+                                <div class="search-result__title">Khóa học truyền thông ngắn hạn</div>
+                                <a class="search-result__link" href="#">
+                                    Khám phá ngay
+                                    <img src="assets/images/4-search/ico-link.svg" alt="" height="" width="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="search-result__item">
+                                <img class="search-result__image" src="assets/images/4-search/rect-2.jpg" alt=""
+                                    height="" width="">
+                                <div class="search-result__category">Truyền thông</div>
+                                <div class="search-result__title">Khóa học truyền thông ngắn hạn</div>
+                                <a class="search-result__link" href="#">
+                                    Khám phá ngay
+                                    <img src="assets/images/4-search/ico-link.svg" alt="" height="" width="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="search-result__item">
+                                <img class="search-result__image" src="assets/images/4-search/rect-3.jpg" alt=""
+                                    height="" width="">
+                                <div class="search-result__category">Truyền thông</div>
+                                <div class="search-result__title">Khóa học truyền thông ngắn hạn</div>
+                                <a class="search-result__link" href="#">
+                                    Khám phá ngay
+                                    <img src="assets/images/4-search/ico-link.svg" alt="" height="" width="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="search-result__item">
+                                <img class="search-result__image" src="assets/images/4-search/rect-1.jpg" alt=""
+                                    height="" width="">
+                                <div class="search-result__category">Truyền thông</div>
+                                <div class="search-result__title">Khóa học truyền thông ngắn hạn</div>
+                                <a class="search-result__link" href="#">
+                                    Khám phá ngay
+                                    <img src="assets/images/4-search/ico-link.svg" alt="" height="" width="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="search-result__item">
+                                <img class="search-result__image" src="assets/images/4-search/rect-2.jpg" alt=""
+                                    height="" width="">
+                                <div class="search-result__category">Truyền thông</div>
+                                <div class="search-result__title">Khóa học truyền thông ngắn hạn</div>
+                                <a class="search-result__link" href="#">
+                                    Khám phá ngay
+                                    <img src="assets/images/4-search/ico-link.svg" alt="" height="" width="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="search-result__item">
+                                <img class="search-result__image" src="assets/images/4-search/rect-3.jpg" alt=""
+                                    height="" width="">
+                                <div class="search-result__category">Truyền thông</div>
+                                <div class="search-result__title">Khóa học truyền thông ngắn hạn</div>
+                                <a class="search-result__link" href="#">
+                                    Khám phá ngay
+                                    <img src="assets/images/4-search/ico-link.svg" alt="" height="" width="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="search-result__item">
+                                <img class="search-result__image" src="assets/images/4-search/rect-1.jpg" alt=""
+                                    height="" width="">
+                                <div class="search-result__category">Truyền thông</div>
+                                <div class="search-result__title">Khóa học truyền thông ngắn hạn</div>
+                                <a class="search-result__link" href="#">
+                                    Khám phá ngay
+                                    <img src="assets/images/4-search/ico-link.svg" alt="" height="" width="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="search-result__item">
+                                <img class="search-result__image" src="assets/images/4-search/rect-2.jpg" alt=""
+                                    height="" width="">
+                                <div class="search-result__category">Truyền thông</div>
+                                <div class="search-result__title">Khóa học truyền thông ngắn hạn</div>
+                                <a class="search-result__link" href="#">
+                                    Khám phá ngay
+                                    <img src="assets/images/4-search/ico-link.svg" alt="" height="" width="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="search-result__item">
+                                <img class="search-result__image" src="assets/images/4-search/rect-3.jpg" alt=""
+                                    height="" width="">
+                                <div class="search-result__category">Truyền thông</div>
+                                <div class="search-result__title">Khóa học truyền thông ngắn hạn</div>
+                                <a class="search-result__link" href="#">
+                                    Khám phá ngay
+                                    <img src="assets/images/4-search/ico-link.svg" alt="" height="" width="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="search-result__paginator flex-center">
+                        <img class="search-result__back" src="assets/images/4-search/ico-arr-left.svg" alt="" height=""
+                            width="">
+                        <div class="search-result__no active">1</div>
+                        <div class="search-result__no">2</div>
+                        <div class="search-result__no">3</div>
+                        <div class="search-result__no">4</div>
+                        <div class="search-result__no">5</div>
+                        <img class="search-result__next" src="assets/images/4-search/ico-arr-right.svg" alt="" height=""
+                            width="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="gap-reg-50"></div>
+    <div class="gap-reg-50"></div>
+    <div class="gap-reg-50"></div>
+
+    </div>
+    <!--#endregion-->
+
+    <!--#region Footer-->
+    <!-- <div class="footer">
+        <div class="container container--big">
+            <div class="row">
+                <div class="col-3">
+                    1
+                </div>
+                <div class="col-1">
+                    2
+                </div>
+                <div class="col-2">
+                    3
+                </div>
+                <div class="col-3">
+                    4
+                </div>
+                <div class="col-2">
+                    5
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!--#endregion-->
+
+    <!--#region Using Google Translate-->
+    <script>
+        var element = document.querySelector('html');
+        const obsLang = new MutationObserver(function (mutations) {
+            mutations.forEach(function (mutation) {
+                if (mutation.type === "attributes") {
+                    if ($('html').attr('lang') == 'en') {
+                        $('.goog-te-combo').attr('style', 'background: url(assets/images/icons/flags/flag-en.svg) no-repeat; background-position: left 8px center; background-color: white; background-size: 25px auto;');
+                    }
+
+                    if ($('html').attr('lang') == 'vi') {
+                        $('.goog-te-combo').attr('style', 'background: url(assets/images/icons/flags/flag-vi.svg) no-repeat; background-position: left 8px center; background-color: white; background-size: 25px auto;');
+                    }
+
+                    if ($('html').attr('lang') == 'ko') {
+                        $('.goog-te-combo').attr('style', 'background: url(assets/images/icons/flags/flag-ko.svg) no-repeat; background-position: left 8px center; background-color: white; background-size: 25px auto;');
+                    }
+
+                    if ($('html').attr('lang') == 'ja') {
+                        $('.goog-te-combo').attr('style', 'background: url(assets/images/icons/flags/flag-ja.svg) no-repeat; background-position: left 8px center; background-color: white; background-size: 25px auto;');
+                    }
+
+                    if ($('html').attr('lang') == 'fr') {
+                        $('.goog-te-combo').attr('style', 'background: url(assets/images/icons/flags/flag-fr.svg) no-repeat; background-position: left 8px center; background-color: white; background-size: 25px auto;');
+                    }
+                }
+            });
+        });
+
+        obsLang.observe(element, {
+            attributes: true
+        });
+
+        function goTrans() { $('#google_translate_element').attr('lang', $('html').attr('lang')); };
+    </script>
+    <!--#endregion-->
+</body>
+
+</html>

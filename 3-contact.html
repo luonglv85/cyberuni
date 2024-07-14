@@ -9,6 +9,7 @@
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
 
     <link rel="stylesheet" href="assets/style/style.css">
+    <link rel="stylesheet" href="assets/style/fonts.css">
     <link rel="stylesheet" href="assets/style/reponsive.css" />
     <link rel="stylesheet" href="assets/plugins/bootstrap-5.3.3/bootstrap.min.css">
     <script src="assets/plugins/jquery/jquery-3.7.1.min.js"></script>
@@ -46,20 +47,8 @@
 <body>
     <div class="bg-main"></div>
 
-    <!--#region Button go top-->
-    <div id="btn-go-top" class="btn-go-top flex-center" onclick="goToTop();">
-        <span></span>
-    </div>
-
-    <script>
-        const goToTop = () => {
-            $("html, body").animate({ scrollTop: 0 }, 200);
-        }
-    </script>
-    <!--#endregion-->
-
     <!--#region Header-->
-    <header class="menu flex-align-center menu--scroll" id="menu">
+    <header class="menu menu--transparent flex-align-center" id="menu">
         <div class="container container--big p-0 flex-align-center position-relative">
             <img src="assets/images/logo-default.svg" class="menu__logo" height="40" width="180" alt="logo" id="logo" />
             <nav
@@ -129,12 +118,10 @@
 
         function myFunction() {
             if (window.pageYOffset > 0) {
-                $("#btn-go-top").addClass("opacity-100");
-                $("#menu").addClass("menu--scroll");
+                $("#menu").removeClass("menu--transparent");
             }
             else {
-                $("#btn-go-top").removeClass("opacity-100");
-                $("#menu").removeClass("menu--scroll");
+                $("#menu").addClass("menu--transparent");
             }
         }
     </script>
@@ -142,210 +129,110 @@
 
     <!--#region Body-->
     <div class="body">
-        <div class="gap-reg-80"></div>
-
-        <div class="container">
-            <ul class="breadcrumb-nav">
-                <li><a href="/" aria-label="Trang chủ">Trang chủ</a></li>
-                <li><a href="#" aria-label="Về chúng tôi">Về chúng tôi</a></li>
-            </ul>
-        </div>
-
-        <div class="about-intro">
-            <img class="about-intro__bg-left" src="assets/images/2-about/rect-left.svg" alt="" height="" width="">
-            <img class="about-intro__bg-right" src="assets/images/2-about/rect-right.svg" alt="" height="" width="">
+        <div class="contact-banner">
+            <img class="contact-banner__bg" src="assets/images/3-contacts/contact-bg.svg" alt="" height="" width="">
 
             <div class="container">
-                <div class="about-intro__headline">
-                    Về chúng tôi
+                <ul class="breadcrumb-nav">
+                    <li><a href="/" aria-label="Trang chủ">Trang chủ</a></li>
+                    <li><a href="#" aria-label="Liên hệ">Liên hệ</a></li>
+                </ul>
+                <div class="contact-banner__headline">
+                    Liên hệ với chúng tôi
                 </div>
-                <div class="about-intro__desc">
-                    Chúng tôi là đơn vị tiên phong trong lĩnh vực giáo dục trực tuyến, cam kết mang lại trải nghiệm học
-                    tập
-                    và giảng dạy tốt nhất cho các trường đại học trên toàn thế giới.
-                </div>
-                <img class="about-intro__image" src="assets/images/2-about/about-intro.jpg" alt="" height="" width="">
             </div>
         </div>
 
-        <div class="gap-reg-50"></div>
-        <div class="gap-reg-50"></div>
         <div class="gap-reg-50"></div>
 
         <div class="container">
-            <div class="about-wwd row">
-                <div class="col-4 about-wwd__headline">Chúng tôi làm gì ?</div>
-                <div class="col-8 about-wwd__content">Thành lập với sứ mệnh cách mạng hóa giáo dục, chúng tôi cung cấp
-                    một nền tảng
-                    giáo dục trực tuyến toàn diện, hiện đại và dễ sử dụng. Với đội ngũ chuyên gia giàu kinh nghiệm
-                    và công nghệ tiên tiến, chúng tôi giúp các trường đại học nâng cao chất lượng giảng dạy, tối ưu
-                    hóa quản lý và mở rộng phạm vi tiếp cận học viên.
-
-                    Chúng tôi tự hào đã đồng hành cùng hàng trăm trường đại học và hàng ngàn giảng viên, học viên
-                    trên toàn cầu.</div>
-            </div>
-
-
-
-
-
-            <div class="gap-reg-50"></div>
-            <div class="gap-reg-50"></div>
-            <div class="gap-reg-50"></div>
-
-
-
-
-
-            <div class="about-misson row">
-                <div class="about-misson__headline">
-                    Sứ mệnh của chúng tôi là nâng cao chất lượng giáo dục
-                </div>
-                <div class="about-misson__image col-6">
-                    <img src="assets/images/2-about/about-mission-left.jpg" alt="" height="" width="">
-                </div>
-
-                <div class="flex-center col-6">
-                    <div class="about-misson__box d-block">
-                        <img src="assets/images/2-about/ico-mission.svg" alt="" height="" width="">
-                        <div class="about-misson__title">
-                            Sứ mệnh
+            <div class="row">
+                <div class="contact-online col-7">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="contact-online__title">
+                                Liên Hệ Trực Tuyến
+                            </div>
+                            <div class="contact-content">
+                                Chúng tôi luôn sẵn sàng lắng nghe và hỗ trợ bạn. Quét mã liên hệ với chúng tôi để biết
+                                thêm chi
+                                tiết
+                                về các dịch vụ và giải pháp giáo dục trực tuyến mà chúng tôi cung cấp.
+                            </div>
                         </div>
-                        Trở thành đơn vị dẫn đầu thị trường Việt Nam và vươn tầm ảnh hưởng ra toàn cầu, đóng góp vào sự
-                        chuyển đổi số hóa toàn diện và nâng cao chất lượng giảng dạy.
-                    </div>
-                </div>
+                        <div class="col-12 d-flex">
+                            <div class="contact-online__box">
+                                <div class="contact-online__label flex-center">
+                                    <img class="contact-online__icon" src="assets/images/3-contacts/ico-zalo.svg" alt=""
+                                        height="" width="">
+                                    <span class="contact-online__name">Zalo</span>
+                                </div>
+                                <div class="flex-center">
+                                    <img src="assets/images/3-contacts/qr-demo.svg" alt="" height="" width="">
+                                </div>
+                            </div>
 
-                <div class="flex-center col-6">
-                    <div class="about-misson__box d-block">
-                        <img src="assets/images/2-about/ico-vision.svg" alt="" height="" width="">
-                        <div class="about-misson__title">
-                            Tầm nhìn
-                        </div>
-                        Cung cấp những chương trình học đa dạng, linh hoạt và đặc biệt là tiết kiệm thời gian, chi phí
-                        tối
-                        đa cho những người có nhu cầu & mong muốn học tập.
-                    </div>
-                </div>
-
-                <div class="about-misson__image col-6">
-                    <img src="assets/images/2-about/about-misson-right.jpg" alt="" height="" width="">
-                </div>
-            </div>
-
-
-
-
-
-            <div class="gap-reg-50"></div>
-            <div class="gap-reg-50"></div>
-            <div class="gap-reg-50"></div>
-
-
-
-
-
-            <div class="about-value">
-                <div class="about-value__headline">
-                    Các giá trị cốt lõi của chúng tôi định hướng mọi hành động và quyết định
-                </div>
-
-                <div class="row">
-                    <div class="about-value__box flex-align-center col-6">
-                        <img class="about-value__icon" src="assets/images/2-about/ico-quality.svg" alt="" height=""
-                            width="">
-                        <div class="about-value__content">
-                            <div class="about-value__title">Chất lượng</div>
-                            <div class="about-value__text">Chúng tôi cam kết cung cấp các giải pháp giáo dục chất
-                                lượng cao, đảm bảo trải nghiệm
-                                học
-                                tập và giảng dạy tốt nhất.</div>
+                            <div class="contact-online__box">
+                                <div class="contact-online__label flex-center">
+                                    <img class="contact-online__icon" src="assets/images/3-contacts/ico-fb.svg" alt=""
+                                        height="" width="">
+                                    <span class="contact-online__name">Facebook</span>
+                                </div>
+                                <div class="flex-center">
+                                    <img src="assets/images/3-contacts/qr-demo.svg" alt="" height="" width="">
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="about-value__box flex-align-center col-6">
-                        <img class="about-value__icon" src="assets/images/2-about/ico-changing.svg" alt="" height=""
-                            width="">
-                        <div class="about-value__content">
-                            <div class="about-value__title">Chất lượng</div>
-                            <div class="about-value__text">Chúng tôi cam kết cung cấp các giải pháp giáo dục chất
-                                lượng cao, đảm bảo trải nghiệm
-                                học
-                                tập và giảng dạy tốt nhất.</div>
+                </div>
+                <div class="col-5">
+                    <div class="contact-offline">
+                        <div class="contact-offline__icon">
+                            <img src="assets/images/3-contacts/ico-location.svg" alt="" height="" width="">
                         </div>
-                    </div>
-                    <div class="about-value__box flex-align-center col-6">
-                        <img class="about-value__icon" src="assets/images/2-about/ico-conscientious.svg" alt=""
-                            height="" width="">
-                        <div class="about-value__content">
-                            <div class="about-value__title">Chất lượng</div>
-                            <div class="about-value__text">Chúng tôi cam kết cung cấp các giải pháp giáo dục chất
-                                lượng cao, đảm bảo trải nghiệm
-                                học
-                                tập và giảng dạy tốt nhất.</div>
-                        </div>
-                    </div>
-                    <div class="about-value__box flex-align-center col-6">
-                        <img class="about-value__icon" src="assets/images/2-about/ico-cooperate.svg" alt="" height=""
-                            width="">
-                        <div class="about-value__content">
-                            <div class="about-value__title">Chất lượng</div>
-                            <div class="about-value__text">Chúng tôi cam kết cung cấp các giải pháp giáo dục chất
-                                lượng cao, đảm bảo trải nghiệm
-                                học
-                                tập và giảng dạy tốt nhất.</div>
+
+                        <div class="contact-offline__box">
+                            <div class="contact-offline__title">Địa chỉ</div>
+                            <div class="contact-offline__detail">Số 186 phố Thúy Lĩnh,P. Lĩnh Nam, Q.
+                                Hoàng Mai, Tp. Hà Nội.</div>
                         </div>
                     </div>
 
+                    <div class="contact-offline">
+                        <div class="contact-offline__icon">
+                            <img src="assets/images/3-contacts/ico-mail.svg" alt="" height="" width="">
+                        </div>
+
+                        <div class="contact-offline__box">
+                            <div class="contact-offline__title">Email</div>
+                            <a href="mailto:cyberunivn@gmail.com" class="contact-offline__detail">cyberunivn@gmail.com
+                        </div>
+                    </div>
+
+                    <div class="contact-offline">
+                        <div class="contact-offline__icon">
+                            <img src="assets/images/3-contacts/ico-phone.svg" alt="" height="" width="">
+                        </div>
+
+                        <div class="contact-offline__box">
+                            <div class="contact-offline__title">Điện thoại</div>
+                            <a href="tel:09876543210" class="contact-offline__detail">09876543210
+                        </div>
+                    </div>
                 </div>
             </div>
 
 
-
-
-
-            <div class="gap-reg-50"></div>
-            <div class="gap-reg-50"></div>
-            <div class="gap-reg-50"></div>
-
-
-
-
-
-            <div class="about-lead">
-                <div class="about-lead__headline">Đội ngũ lãnh đạo của chúng tôi</div>
-                <div class="row">
-                    <div class="about-lead__box col-3">
-                        <img class="about-lead__avatar" src="assets/images/2-about/ico-mission.svg" alt="" height=""
-                            width="">
-                        <div class="about-lead__name">Họ tên</div>
-                        <div class="about-lead__role">Chức vụ</div>
-                    </div>
-                    <div class="about-lead__box col-3">
-                        <img class="about-lead__avatar" src="assets/images/2-about/ico-mission.svg" alt="" height=""
-                            width="">
-                        <div class="about-lead__name">Họ tên</div>
-                        <div class="about-lead__role">Chức vụ</div>
-                    </div>
-                    <div class="about-lead__box col-3">
-                        <img class="about-lead__avatar" src="assets/images/2-about/ico-mission.svg" alt="" height=""
-                            width="">
-                        <div class="about-lead__name">Họ tên</div>
-                        <div class="about-lead__role">Chức vụ</div>
-                    </div>
-                    <div class="about-lead__box col-3">
-                        <img class="about-lead__avatar" src="assets/images/2-about/ico-mission.svg" alt="" height=""
-                            width="">
-                        <div class="about-lead__name">Họ tên</div>
-                        <div class="about-lead__role">Chức vụ</div>
-                    </div>
-                </div>
-            </div>
         </div>
+    </div>
+    </div>
 
 
-        <div class="gap-reg-50"></div>
-        <div class="gap-reg-50"></div>
-        <div class="gap-reg-50"></div>
+
+    <div class="gap-reg-50"></div>
+    <div class="gap-reg-50"></div>
+    <div class="gap-reg-50"></div>
+
     </div>
     <!--#endregion-->
 

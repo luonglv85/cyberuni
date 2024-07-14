@@ -9,6 +9,7 @@
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
 
     <link rel="stylesheet" href="assets/style/style.css">
+    <link rel="stylesheet" href="assets/style/fonts.css">
     <link rel="stylesheet" href="assets/style/reponsive.css" />
     <link rel="stylesheet" href="assets/plugins/bootstrap-5.3.3/bootstrap.min.css">
     <script src="assets/plugins/jquery/jquery-3.7.1.min.js"></script>
@@ -45,18 +46,6 @@
 
 <body>
     <div class="bg-main"></div>
-
-    <!--#region Button go top-->
-    <div id="btn-go-top" class="btn-go-top flex-center" onclick="goToTop();">
-        <span></span>
-    </div>
-
-    <script>
-        const goToTop = () => {
-            $("html, body").animate({ scrollTop: 0 }, 200);
-        }
-    </script>
-    <!--#endregion-->
 
     <!--#region Header-->
     <header class="menu flex-align-center menu--scroll" id="menu">
@@ -123,19 +112,6 @@
             </div>
         </div>
     </header>
-
-    <script>
-        window.onscroll = function () { myFunction() };
-
-        function myFunction() {
-            if (window.pageYOffset > 0) {
-                $("#btn-go-top").addClass("opacity-100");
-            }
-            else {
-                $("#btn-go-top").removeClass("opacity-100");
-            }
-        }
-    </script>
     <!--#endregion-->
 
     <!--#region Body-->
@@ -309,32 +285,32 @@
 
 
 
-            <div class="about-lead">
-                <div class="about-lead__headline">Đội ngũ lãnh đạo của chúng tôi</div>
+            <div class="reg-people">
+                <div class="reg-people__headline">Đội ngũ lãnh đạo của chúng tôi</div>
                 <div class="row">
-                    <div class="about-lead__box col-3">
-                        <img class="about-lead__avatar" src="assets/images/2-about/ico-mission.svg" alt="" height=""
+                    <div class="reg-people__box col-3">
+                        <img class="reg-people__avatar" src="assets/images/2-about/ico-mission.svg" alt="" height=""
                             width="">
-                        <div class="about-lead__name">Họ tên</div>
-                        <div class="about-lead__role">Chức vụ</div>
+                        <div class="reg-people__name">Họ tên</div>
+                        <div class="reg-people__role">Chức vụ</div>
                     </div>
-                    <div class="about-lead__box col-3">
-                        <img class="about-lead__avatar" src="assets/images/2-about/ico-mission.svg" alt="" height=""
+                    <div class="reg-people__box col-3">
+                        <img class="reg-people__avatar" src="assets/images/2-about/ico-mission.svg" alt="" height=""
                             width="">
-                        <div class="about-lead__name">Họ tên</div>
-                        <div class="about-lead__role">Chức vụ</div>
+                        <div class="reg-people__name">Họ tên</div>
+                        <div class="reg-people__role">Chức vụ</div>
                     </div>
-                    <div class="about-lead__box col-3">
-                        <img class="about-lead__avatar" src="assets/images/2-about/ico-mission.svg" alt="" height=""
+                    <div class="reg-people__box col-3">
+                        <img class="reg-people__avatar" src="assets/images/2-about/ico-mission.svg" alt="" height=""
                             width="">
-                        <div class="about-lead__name">Họ tên</div>
-                        <div class="about-lead__role">Chức vụ</div>
+                        <div class="reg-people__name">Họ tên</div>
+                        <div class="reg-people__role">Chức vụ</div>
                     </div>
-                    <div class="about-lead__box col-3">
-                        <img class="about-lead__avatar" src="assets/images/2-about/ico-mission.svg" alt="" height=""
+                    <div class="reg-people__box col-3">
+                        <img class="reg-people__avatar" src="assets/images/2-about/ico-mission.svg" alt="" height=""
                             width="">
-                        <div class="about-lead__name">Họ tên</div>
-                        <div class="about-lead__role">Chức vụ</div>
+                        <div class="reg-people__name">Họ tên</div>
+                        <div class="reg-people__role">Chức vụ</div>
                     </div>
                 </div>
             </div>
