@@ -71,22 +71,22 @@
                 <div class="row p-0 m-0 w-100">
                     <a class="mb-menu__item col">
                         <p class="flex-center">Chính sách</p>
-                        <img class="flex-center" src="assets/images/icons/ico-menu-policy.svg" height="24" width="24"
-                            alt="policy">
+                        <img class="flex-center" src="assets/images/header/mb/ico-menu-policy.svg" height="24"
+                            width="24" alt="policy">
                     </a>
                     <a class="mb-menu__item col">
                         <p class="flex-center">Khóa học</p>
-                        <img class="flex-center" src="assets/images/icons/ico-menu-cource.svg" height="24" width="24"
-                            alt="course">
+                        <img class="flex-center" src="assets/images/header/mb/ico-menu-cource.svg" height="24"
+                            width="24" alt="course">
                     </a>
                     <a class="mb-menu__item col">
                         <p class="flex-center">Về chúng tôi</p>
-                        <img class="flex-center" src="assets/images/icons/ico-menu-about.svg" height="24" width="24"
+                        <img class="flex-center" src="assets/images/header/mb/ico-menu-about.svg" height="24" width="24"
                             alt="about">
                     </a>
                     <a class="mb-menu__item col">
                         <p class="flex-center">Đăng nhập</p>
-                        <img class="flex-center" src="assets/images/icons/ico-menu-login.svg" height="24" width="24"
+                        <img class="flex-center" src="assets/images/header/mb/ico-menu-login.svg" height="24" width="24"
                             alt="login">
                     </a>
                 </div>
@@ -129,7 +129,7 @@
 
     <!--#region Body-->
     <div class="body">
-        <div class="reg-banner">
+        <div class="reg-banner d-none d-sm-none d-md-grid d-lg-grid">
             <div class="reg-banner__bg"></div>
 
             <div class="container">
@@ -155,13 +155,28 @@
             </div>
         </div>
 
-        <div class="gap-reg-50"></div>
+        <div class="container search-mb d-block d-sm-block d-md-none d-lg-none">
+            <div class="search-mb__headline">
+                <img src="assets/images/4-search/ico-arr-left.svg" alt="" height="" width="">
+                Trang tìm kiếm
+            </div>
+            <input class="search-mb__input" type="text" placeholder="Nhập từ khóa">
+            <div class="search-mb__list">
+                <div class="search-mb__category selected">Khóa học</div>
+                <div class="search-mb__category">Giáo dục</div>
+                <div class="search-mb__category">Công nghệ thông tin</div>
+                <div class="search-mb__category">Quản trị kinh doanh</div>
+                <div class="search-mb__category">Chứng chỉ tốt nghiệp</div>
+                <div class="search-mb__category">Truyền thông đa phương tiện</div>
+            </div>
+        </div>
 
-        <div class="container">
+        <div class="container search-ctn">
             <div class="row">
-                <div class="col-3 search-filter">
+                <div
+                    class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-3 search-filter d-none d-sm-none d-md-block d-xl-block">
                     <div>
-                        <div class="search-filter__title">Lọc theo</div>
+                        <div class="search-filter__title">Phân loại theo</div>
                         <div class="search-filter__category">Khóa học</div>
 
                         <div>
@@ -197,12 +212,12 @@
                     </div>
                 </div>
 
-                <div class="col-9 box-item">
+                <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-9 box-item">
                     <div class="box-item__keyword">
                         Kết quả tìm kiếm cho từ khóa: <span>Khóa học</span>
                     </div>
                     <div class="row">
-                        <div class="col-4">
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4">
                             <div class="box-item__item">
                                 <img class="box-item__image" src="assets/images/4-search/rect-1.jpg" alt="" height=""
                                     width="">
@@ -214,31 +229,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="col-4">
-                            <div class="box-item__item">
-                                <img class="box-item__image" src="assets/images/4-search/rect-2.jpg" alt="" height=""
-                                    width="">
-                                <div class="box-item__category">Truyền thông</div>
-                                <div class="box-item__title">Khóa học truyền thông ngắn hạn</div>
-                                <a class="anchor__link" href="#">
-                                    Khám phá ngay
-                                    <img src="assets/images/4-search/ico-link.svg" alt="" height="" width="">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="box-item__item">
-                                <img class="box-item__image" src="assets/images/4-search/rect-3.jpg" alt="" height=""
-                                    width="">
-                                <div class="box-item__category">Truyền thông</div>
-                                <div class="box-item__title">Khóa học truyền thông ngắn hạn</div>
-                                <a class="anchor__link" href="#">
-                                    Khám phá ngay
-                                    <img src="assets/images/4-search/ico-link.svg" alt="" height="" width="">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-4">
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4">
                             <div class="box-item__item">
                                 <img class="box-item__image" src="assets/images/4-search/rect-1.jpg" alt="" height=""
                                     width="">
@@ -250,31 +241,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="col-4">
-                            <div class="box-item__item">
-                                <img class="box-item__image" src="assets/images/4-search/rect-2.jpg" alt="" height=""
-                                    width="">
-                                <div class="box-item__category">Truyền thông</div>
-                                <div class="box-item__title">Khóa học truyền thông ngắn hạn</div>
-                                <a class="anchor__link" href="#">
-                                    Khám phá ngay
-                                    <img src="assets/images/4-search/ico-link.svg" alt="" height="" width="">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="box-item__item">
-                                <img class="box-item__image" src="assets/images/4-search/rect-3.jpg" alt="" height=""
-                                    width="">
-                                <div class="box-item__category">Truyền thông</div>
-                                <div class="box-item__title">Khóa học truyền thông ngắn hạn</div>
-                                <a class="anchor__link" href="#">
-                                    Khám phá ngay
-                                    <img src="assets/images/4-search/ico-link.svg" alt="" height="" width="">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-4">
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4">
                             <div class="box-item__item">
                                 <img class="box-item__image" src="assets/images/4-search/rect-1.jpg" alt="" height=""
                                     width="">
@@ -286,9 +253,9 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4">
                             <div class="box-item__item">
-                                <img class="box-item__image" src="assets/images/4-search/rect-2.jpg" alt="" height=""
+                                <img class="box-item__image" src="assets/images/4-search/rect-1.jpg" alt="" height=""
                                     width="">
                                 <div class="box-item__category">Truyền thông</div>
                                 <div class="box-item__title">Khóa học truyền thông ngắn hạn</div>
@@ -298,9 +265,9 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4">
                             <div class="box-item__item">
-                                <img class="box-item__image" src="assets/images/4-search/rect-3.jpg" alt="" height=""
+                                <img class="box-item__image" src="assets/images/4-search/rect-1.jpg" alt="" height=""
                                     width="">
                                 <div class="box-item__category">Truyền thông</div>
                                 <div class="box-item__title">Khóa học truyền thông ngắn hạn</div>
@@ -310,6 +277,91 @@
                                 </a>
                             </div>
                         </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4">
+                            <div class="box-item__item">
+                                <img class="box-item__image" src="assets/images/4-search/rect-1.jpg" alt="" height=""
+                                    width="">
+                                <div class="box-item__category">Truyền thông</div>
+                                <div class="box-item__title">Khóa học truyền thông ngắn hạn</div>
+                                <a class="anchor__link" href="#">
+                                    Khám phá ngay
+                                    <img src="assets/images/4-search/ico-link.svg" alt="" height="" width="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4">
+                            <div class="box-item__item">
+                                <img class="box-item__image" src="assets/images/4-search/rect-1.jpg" alt="" height=""
+                                    width="">
+                                <div class="box-item__category">Truyền thông</div>
+                                <div class="box-item__title">Khóa học truyền thông ngắn hạn</div>
+                                <a class="anchor__link" href="#">
+                                    Khám phá ngay
+                                    <img src="assets/images/4-search/ico-link.svg" alt="" height="" width="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4">
+                            <div class="box-item__item">
+                                <img class="box-item__image" src="assets/images/4-search/rect-1.jpg" alt="" height=""
+                                    width="">
+                                <div class="box-item__category">Truyền thông</div>
+                                <div class="box-item__title">Khóa học truyền thông ngắn hạn</div>
+                                <a class="anchor__link" href="#">
+                                    Khám phá ngay
+                                    <img src="assets/images/4-search/ico-link.svg" alt="" height="" width="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4">
+                            <div class="box-item__item">
+                                <img class="box-item__image" src="assets/images/4-search/rect-1.jpg" alt="" height=""
+                                    width="">
+                                <div class="box-item__category">Truyền thông</div>
+                                <div class="box-item__title">Khóa học truyền thông ngắn hạn</div>
+                                <a class="anchor__link" href="#">
+                                    Khám phá ngay
+                                    <img src="assets/images/4-search/ico-link.svg" alt="" height="" width="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4">
+                            <div class="box-item__item">
+                                <img class="box-item__image" src="assets/images/4-search/rect-1.jpg" alt="" height=""
+                                    width="">
+                                <div class="box-item__category">Truyền thông</div>
+                                <div class="box-item__title">Khóa học truyền thông ngắn hạn</div>
+                                <a class="anchor__link" href="#">
+                                    Khám phá ngay
+                                    <img src="assets/images/4-search/ico-link.svg" alt="" height="" width="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4">
+                            <div class="box-item__item">
+                                <img class="box-item__image" src="assets/images/4-search/rect-1.jpg" alt="" height=""
+                                    width="">
+                                <div class="box-item__category">Truyền thông</div>
+                                <div class="box-item__title">Khóa học truyền thông ngắn hạn</div>
+                                <a class="anchor__link" href="#">
+                                    Khám phá ngay
+                                    <img src="assets/images/4-search/ico-link.svg" alt="" height="" width="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4">
+                            <div class="box-item__item">
+                                <img class="box-item__image" src="assets/images/4-search/rect-1.jpg" alt="" height=""
+                                    width="">
+                                <div class="box-item__category">Truyền thông</div>
+                                <div class="box-item__title">Khóa học truyền thông ngắn hạn</div>
+                                <a class="anchor__link" href="#">
+                                    Khám phá ngay
+                                    <img src="assets/images/4-search/ico-link.svg" alt="" height="" width="">
+                                </a>
+                            </div>
+                        </div>
+
                     </div>
                     <div class="box-item__paginator flex-center">
                         <img class="box-item__back" src="assets/images/4-search/ico-arr-left.svg" alt="" height=""
@@ -318,7 +370,7 @@
                         <div class="box-item__no">2</div>
                         <div class="box-item__no">3</div>
                         <div class="box-item__no">4</div>
-                        <div class="box-item__no">5</div>
+                        <div class="box-item__no d-none d-sm-none d-md-block d-lg-block">5</div>
                         <img class="box-item__next" src="assets/images/4-search/ico-arr-right.svg" alt="" height=""
                             width="">
                     </div>
@@ -327,11 +379,7 @@
         </div>
     </div>
 
-
-
-    <div class="gap-reg-50"></div>
-    <div class="gap-reg-50"></div>
-    <div class="gap-reg-50"></div>
+    <div class="box-gap-reg"></div>
 
     </div>
     <!--#endregion-->
