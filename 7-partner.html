@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="assets/plugins/bootstrap-5.3.3/bootstrap.min.css">
     <script src="assets/plugins/jquery/jquery-3.7.1.min.js"></script>
 
+    <script src="assets/plugins/swiper-slider/js/swiper.min.js"></script>
+    <link href="assets/plugins/swiper-slider/css/swiper.min.css" rel="stylesheet" />
+
     <meta name="title" content="CYBERUNI" />
     <meta name="keywords" content="CYBERUNI" />
     <meta name="description" content="CYBERUNI">
@@ -36,12 +39,6 @@
     <script type="text/javascript"
         src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async></script>
     <!--#endregion-->
-
-    <!--#region Schema-->
-    <!-- <script type="application/ld+json">
-
-    </script> -->
-    <!--#endregion-->
 </head>
 
 <body>
@@ -63,37 +60,51 @@
                     Đối tác
                 </a>
                 <a class="menu__item">
+                    Góc nhìn số
+                </a>
+                <a class="menu__item menu-about">
                     Về chúng tôi
+                    <div class="extened-menu">
+                        <div class="extened-menu__title">VỀ CHÚNG TÔI</div>
+                        <div class="extened-menu__ops">Tin tức</div>
+                        <div class="extened-menu__ops">Blog</div>
+                        <div class="extened-menu__ops">Về chúng tôi</div>
+                    </div>
                 </a>
             </nav>
 
             <nav class="menu-mb d-flex d-sm-flex d-md-flex d-lg-flex d-xl-none flex-align-center">
                 <div class="row p-0 m-0 w-100">
                     <a class="mb-menu__item col">
-                        <p class="flex-center">Chính sách</p>
                         <img class="flex-center" src="assets/images/header/mb/ico-menu-policy.svg" height="24"
                             width="24" alt="policy">
+                        <p class="flex-center">Trang chủ</p>
                     </a>
                     <a class="mb-menu__item col">
-                        <p class="flex-center">Khóa học</p>
+                        <img class="flex-center" src="assets/images/header/mb/ico-menu-policy.svg" height="24"
+                            width="24" alt="policy">
+                        <p class="flex-center">Chính sách</p>
+                    </a>
+                    <a class="mb-menu__item col">
                         <img class="flex-center" src="assets/images/header/mb/ico-menu-cource.svg" height="24"
                             width="24" alt="course">
+                        <p class="flex-center">Khóa học</p>
                     </a>
                     <a class="mb-menu__item col">
-                        <p class="flex-center">Về chúng tôi</p>
                         <img class="flex-center" src="assets/images/header/mb/ico-menu-about.svg" height="24" width="24"
                             alt="about">
+                        <p class="flex-center">Về chúng tôi</p>
                     </a>
                     <a class="mb-menu__item col">
-                        <p class="flex-center">Đăng nhập</p>
                         <img class="flex-center" src="assets/images/header/mb/ico-menu-login.svg" height="24" width="24"
                             alt="login">
+                        <p class="flex-center">Đăng nhập</p>
                     </a>
                 </div>
             </nav>
 
             <div class="menu__ops flex-align-center">
-                <div class="menu__search">
+                <div class="menu__search d-none d-sm-none d-md-flex d-lg-flex d-xl-flex">
                     <span><img src="assets/images/icons/ico-search.svg" height="24" width="24" alt="search"></span>
                 </div>
 
@@ -107,7 +118,53 @@
 
                 <div class="btn-general btn-general--gradient d-none d-sm-none d-md-none d-lg-none d-xl-flex">
                     Đăng nhập
-                    <span><img src="assets/images/icons/ico-login.svg" height="" width="" alt="login"></span>
+                    <span class="btn-general__icon"><img src="assets/images/icons/ico-login.svg" height="" width=""
+                            alt="login"></span>
+                </div>
+
+                <div class="menu-ico-mb flex-align-center d-flex d-xs-flex d-sm-flex d-md-flex d-lg-flex d-xl-none">
+                    <input type="checkbox" class="d-none" id="mb-menu-check">
+                    <label for="mb-menu-check"></label>
+                    <label for="mb-menu-check"></label>
+                    <label for="mb-menu-check"></label>
+                    <label for="mb-menu-check" class="cover"></label>
+
+                    <div class="menu-popup ">
+                        <div class="menu-popup__nav container container--big p-0">
+                            <a href="#" class="menu-popup__category">
+                                Trang chủ
+                            </a>
+                            <a href="#" class="menu-popup__category">
+                                Thế mạnh
+                            </a>
+                            <a href="#" class="menu-popup__category">
+                                Khách hàng
+                            </a>
+                            <a href="#" class="menu-popup__category">
+                                Đối tác
+                            </a>
+                            <a href="#" class="menu-popup__category">
+                                Góc nhìn số
+                            </a>
+                            <a class="menu-popup__category about">
+                                Về chúng tôi
+                                <input type="checkbox" class="d-none" id="mb-menu-about">
+                                <label for="mb-menu-about"></label>
+                                <img src="assets/images/header/arr-drop.svg" height="" width="" alt="" />
+                                <div class="about-ops">
+                                    <div>Tin tức</div>
+                                    <div>Blog</div>
+                                    <div>Về chúng tôi</div>
+                                </div>
+                            </a>
+                            <a href="#" class="menu-popup__category">
+                                Tìm kiếm
+                            </a>
+                            <div class="btn-general btn-general--blue w-100">
+                                Liên hệ
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -119,9 +176,11 @@
         function myFunction() {
             if (window.pageYOffset > 0) {
                 $("#menu").removeClass("menu--transparent");
+                $("#menu").addClass("menu--white");
             }
             else {
                 $("#menu").addClass("menu--transparent");
+                $("#menu").removeClass("menu--white");
             }
         }
     </script>
@@ -138,7 +197,7 @@
                     <li><a href="#" aria-label="Liên hệ">Liên hệ</a></li>
                 </ul>
 
-                <div class="reg-banner__box text-center text-sm-center text-md-start text-lg-start">
+                <div class="reg-banner__box text-center text-sm-center text-md-start text-lg-start p-0 m-0">
                     <div class="reg-banner__headline">
                         Khách hàng của chúng tôi
                     </div>
@@ -242,40 +301,140 @@
 
         <div class="reg-story container">
             <div class="customer-headline">
-                Câu chuyện thành công mà chúng tôi đã cùng các trường đại học tạo ra.
+                Câu chuyện thành công mà chúng tôi đã cùng các trường đại học tạo ra
             </div>
 
             <div class="row">
                 <div class="col-12">
-                    <div class="reg-story__box row">
-                        <div class="col-12 col-sm-12 col-md-6 col-lg-6">
-                            <img class="reg-story__image" src="assets/images/6-customer/screen-tabs.svg" height=""
-                                width="">
-                        </div>
-                        <div class="col-12 col-sm-12 col-md-6 col-lg-6">
-                            <div class="reg-story__content">
-                                <div class="reg-story__pre">Lĩnh vực</div>
-                                <div class="reg-story__title">Tên trường đại học</div>
-                                <div class="reg-story__content">
-                                    Những năm gần đây, ngành Dược chứng kiến thay đổi mạnh mẽ từ thị trường. Tác
-                                    động từ
-                                    đại dịch COVID-19 tưởng chừng chỉ mang tính giai đoạn nhưng cũng tạo nên động
-                                    lực
-                                    thúc đẩy ngành giáo dục chuyển mình bằng công nghệ.
+                    <div class="reg-story__box">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                            <img class="reg-story__image" src="assets/images/6-customer/screen-tabs.svg"
+                                                height="" width="">
+                                        </div>
+                                        <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                            <div class="reg-story__content">
+                                                <div class="reg-story__pre">Lĩnh vực</div>
+                                                <div class="reg-story__title">Tên trường đại học</div>
+                                                <div class="reg-story__content">
+                                                    Những năm gần đây, ngành Dược chứng kiến thay đổi mạnh mẽ từ thị
+                                                    trường. Tác
+                                                    động từ
+                                                    đại dịch COVID-19 tưởng chừng chỉ mang tính giai đoạn nhưng cũng tạo
+                                                    nên động
+                                                    lực
+                                                    thúc đẩy ngành giáo dục chuyển mình bằng công nghệ.
 
-                                    Câu chuyện của Trường Đại học A cùng CyberUni gợi mở những kinh nghiệm và góc
-                                    nhìn
-                                    toàn diện về chuyển đổi số trong ngành. Tạo nhiều cơ hội học tập cho học sinh,
-                                    sinh
-                                    viên trong tương lai.
+                                                    Câu chuyện của Trường Đại học A cùng CyberUni gợi mở những kinh
+                                                    nghiệm và góc
+                                                    nhìn
+                                                    toàn diện về chuyển đổi số trong ngành. Tạo nhiều cơ hội học tập cho
+                                                    học sinh,
+                                                    sinh
+                                                    viên trong tương lai.
+                                                </div>
+                                                <a class="anchor__link" href="#">
+                                                    Tìm hiểu thêm
+                                                    <img src="assets/images/4-search/ico-link.svg" alt="" height=""
+                                                        width="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <a class="anchor__link" href="#">
-                                    Tìm hiểu thêm
-                                    <img src="assets/images/4-search/ico-link.svg" alt="" height="" width="">
-                                </a>
+                                <div class="swiper-slide">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                            <img class="reg-story__image" src="assets/images/6-customer/screen-tabs.svg"
+                                                height="" width="">
+                                        </div>
+                                        <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                            <div class="reg-story__content">
+                                                <div class="reg-story__pre">Lĩnh vực</div>
+                                                <div class="reg-story__title">Tên trường đại học</div>
+                                                <div class="reg-story__content">
+                                                    Những năm gần đây, ngành Dược chứng kiến thay đổi mạnh mẽ từ thị
+                                                    trường. Tác
+                                                    động từ
+                                                    đại dịch COVID-19 tưởng chừng chỉ mang tính giai đoạn nhưng cũng tạo
+                                                    nên động
+                                                    lực
+                                                    thúc đẩy ngành giáo dục chuyển mình bằng công nghệ.
+
+                                                    Câu chuyện của Trường Đại học A cùng CyberUni gợi mở những kinh
+                                                    nghiệm và góc
+                                                    nhìn
+                                                    toàn diện về chuyển đổi số trong ngành. Tạo nhiều cơ hội học tập cho
+                                                    học sinh,
+                                                    sinh
+                                                    viên trong tương lai.
+                                                </div>
+                                                <a class="anchor__link" href="#">
+                                                    Tìm hiểu thêm
+                                                    <img src="assets/images/4-search/ico-link.svg" alt="" height=""
+                                                        width="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                            <img class="reg-story__image" src="assets/images/6-customer/screen-tabs.svg"
+                                                height="" width="">
+                                        </div>
+                                        <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                            <div class="reg-story__content">
+                                                <div class="reg-story__pre">Lĩnh vực</div>
+                                                <div class="reg-story__title">Tên trường đại học</div>
+                                                <div class="reg-story__content">
+                                                    Những năm gần đây, ngành Dược chứng kiến thay đổi mạnh mẽ từ thị
+                                                    trường. Tác
+                                                    động từ
+                                                    đại dịch COVID-19 tưởng chừng chỉ mang tính giai đoạn nhưng cũng tạo
+                                                    nên động
+                                                    lực
+                                                    thúc đẩy ngành giáo dục chuyển mình bằng công nghệ.
+
+                                                    Câu chuyện của Trường Đại học A cùng CyberUni gợi mở những kinh
+                                                    nghiệm và góc
+                                                    nhìn
+                                                    toàn diện về chuyển đổi số trong ngành. Tạo nhiều cơ hội học tập cho
+                                                    học sinh,
+                                                    sinh
+                                                    viên trong tương lai.
+                                                </div>
+                                                <a class="anchor__link" href="#">
+                                                    Tìm hiểu thêm
+                                                    <img src="assets/images/4-search/ico-link.svg" alt="" height=""
+                                                        width="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+                            <div class="swiper-pagination"></div>
+
                         </div>
                     </div>
+
+                    <script>
+                        let cmtSwiper = new Swiper('.reg-story__box .swiper-container', {
+                            slidesPerView: 1,
+                            spaceBetween: 0,
+                            loop: false,
+                            pagination: {
+                                el: '.reg-story__box .swiper-pagination',
+                                clickable: true,
+                            }
+                        }
+                        );
+                    </script>
                 </div>
             </div>
         </div>
@@ -341,15 +500,15 @@
                 </div>
 
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6">
-                    <input class="reg-register__input" type="text" placeholder="Họ và tên *" />
+                    <input class="reg-register__input" type="text" placeholder="Công ty/Tổ chức *" />
                 </div>
 
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6">
-                    <input class="reg-register__input" type="text" placeholder="Họ và tên *" />
+                    <input class="reg-register__input" type="text" placeholder="Email *" />
                 </div>
 
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6">
-                    <input class="reg-register__input" type="text" placeholder="Họ và tên *" />
+                    <input class="reg-register__input" type="text" placeholder="Số điện thoại *" />
                 </div>
 
                 <div class="col-12">
@@ -372,27 +531,66 @@
     <!--#endregion-->
 
     <!--#region Footer-->
-    <!-- <div class="footer">
+    <div class="footer">
         <div class="container container--big">
             <div class="row">
-                <div class="col-3">
-                    1
+                <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 footer__block">
+                    <img class="footer__logo" src="assets/images/logo-default.svg" alt="" height="" width="">
+
+                    <div class="footer__content">
+                        <p>Công ty Cổ Phần Công Nghệ Sao Thiên Vương</p>
+                        <p>Số ĐKKD 0109681050 do Sở KHĐT Tp. Hà Nội
+                            cấp ngày 23/06/2021</p>
+                        <p>Địa chỉ: Số 186 phố Thúy Lĩnh,P. Lĩnh Nam, Q.
+                            Hoàng Mai, Tp. Hà Nội.</p>
+                    </div>
                 </div>
-                <div class="col-1">
-                    2
+                <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-2 footer__block">
+                    <div class="footer__title">Về chúng tôi</div>
+                    <a href="#" class="footer__content">Thông tin</a>
+                    <a href="#" class="footer__content">Hỗ trợ</a>
+                    <a href="#" class="footer__content">Cộng đồng</a>
+                    <a href="#" class="footer__content">Văn hóa</a>
                 </div>
-                <div class="col-2">
-                    3
+                <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-2 footer__block">
+                    <div class="footer__title">Công ty</div>
+                    <a href="#" class="footer__content">Thiết kế chương trình</a>
+                    <a href="#" class="footer__content">Phát triển học liệu</a>
+                    <a href="#" class="footer__content">Hệ thống công nghệ</a>
+                    <a href="#" class="footer__content">Vận hành dịch vụ</a>
                 </div>
-                <div class="col-3">
-                    4
+                <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 footer__block">
+                    <div class="footer__title">Chính sách và quy định</div>
+                    <a href="#" class="footer__content">Phương thức thanh toán</a>
+                    <a href="#" class="footer__content">Chính sách bảo mật thông tin</a>
+                    <a href="#" class="footer__content">Chính sách xử lý khiếu nại</a>
+                    <a href="#" class="footer__content">Giải đáp thắc mắc</a>
                 </div>
-                <div class="col-2">
-                    5
+                <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-2 footer__block">
+                    <div class="footer__title">Liên hệ</div>
+                    <a href="#" class="footer__content">
+                        <img class="footer__contact" src="assets/images/footer/ico-phone.svg" alt="" height="" width="">
+                        09876543210
+                    </a>
+                    <a href="#" class="footer__content">
+                        <img class="footer__contact" src="assets/images/footer/ico-envelope.svg" alt="" height=""
+                            width="">
+                        cyberunivn@gmail.com
+                    </a>
+                    <a href="#">
+                        <img class="footer__social" src="assets/images/footer/ico-fb.svg" alt="" height="" width="">
+                    </a>
+                    <a href="#">
+                        <img class="footer__social" src="assets/images/footer/ico-tiktok.svg" alt="" height="" width="">
+                    </a>
+                    <a href="#">
+                        <img class="footer__social" src="assets/images/footer/ico-linkedin.svg" alt="" height=""
+                            width="">
+                    </a>
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
     <!--#endregion-->
 
     <!--#region Using Google Translate-->

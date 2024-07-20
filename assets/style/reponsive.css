@@ -752,6 +752,10 @@
         padding: 50px 12px 80px 12px;
     }
 
+    .menu-ico-mb>input[type=checkbox]:checked~.menu-popup {
+        top: 64px;
+    }
+
     /* #endregion */
 
     /* #region Home */
