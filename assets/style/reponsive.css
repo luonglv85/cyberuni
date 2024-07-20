@@ -24,6 +24,12 @@
         padding: 80px 50px 100px 50px;
     }
 
+    .menu__search,
+    .language-box {
+        right: 60px;
+        position: relative;
+    }
+
     /* #endregion */
 
     /* #region Home */
@@ -622,6 +628,7 @@
     .course-comment__title {
         font-size: 29px;
         line-height: 43.5px;
+        margin-bottom: 16px;
     }
 
     .course-comment__box {
@@ -718,10 +725,19 @@
         height: 68px;
     }
 
+    .mb-menu__item.col {
+        padding: 0;
+    }
+
     .mb-menu__item p {
         flex-grow: 1;
         font-size: 11px;
         color: #353C46;
+    }
+
+    .mb-menu__item img {
+        height: 20px;
+        width: 20px;
     }
 
     ul.breadcrumb-nav {
@@ -1084,6 +1100,40 @@
     /* #region Blog Detail */
     .blog-contact-box .btn-general {
         width: 100%;
+    }
+
+    .share-info {
+        justify-content: center;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .share-info__social {
+        width: 155px;
+    }
+
+    .publish-info div:first-of-type {
+        flex-grow: 1;
+        flex-shrink: 0;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .publish-info div:nth-of-type(n+1) {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        margin: 6px auto;
+    }
+
+    .publish-info div::after {
+        right: -50%;
+    }
+
+    .blog-main-img,
+    .blog-sup-img {
+        margin: 28px 0;
     }
 
     /* #endregion */
