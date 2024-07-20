@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="assets/plugins/bootstrap-5.3.3/bootstrap.min.css">
     <script src="assets/plugins/jquery/jquery-3.7.1.min.js"></script>
 
+    <script src="assets/plugins/swiper-slider/js/swiper.min.js"></script>
+    <link href="assets/plugins/swiper-slider/css/swiper.min.css" rel="stylesheet" />
+
     <meta name="title" content="CYBERUNI" />
     <meta name="keywords" content="CYBERUNI" />
     <meta name="description" content="CYBERUNI">
@@ -48,7 +51,7 @@
     <div class="bg-main"></div>
 
     <!--#region Header-->
-    <header class="menu menu--transparent flex-align-center" id="menu">
+    <header class="menu menu--white flex-align-center" id="menu">
         <div class="container container--big p-0 flex-align-center position-relative">
             <img src="assets/images/logo-default.svg" class="menu__logo" height="40" width="180" alt="logo" id="logo" />
             <nav
@@ -63,12 +66,26 @@
                     Đối tác
                 </a>
                 <a class="menu__item">
+                    Gó nhìn số
+                </a>
+                <a class="menu__item menu-about">
                     Về chúng tôi
+                    <div class="extened-menu">
+                        <div class="extened-menu__title">VỀ CHÚNG TÔI</div>
+                        <div class="extened-menu__ops">Tin tức</div>
+                        <div class="extened-menu__ops">Blog</div>
+                        <div class="extened-menu__ops">Về chúng tôi</div>
+                    </div>
                 </a>
             </nav>
 
             <nav class="menu-mb d-flex d-sm-flex d-md-flex d-lg-flex d-xl-none flex-align-center">
                 <div class="row p-0 m-0 w-100">
+                    <a class="mb-menu__item col">
+                        <p class="flex-center">Trang chủ</p>
+                        <img class="flex-center" src="assets/images/header/mb/ico-menu-policy.svg" height="24"
+                            width="24" alt="policy">
+                    </a>
                     <a class="mb-menu__item col">
                         <p class="flex-center">Chính sách</p>
                         <img class="flex-center" src="assets/images/header/mb/ico-menu-policy.svg" height="24"
@@ -93,7 +110,7 @@
             </nav>
 
             <div class="menu__ops flex-align-center">
-                <div class="menu__search">
+                <div class="menu__search d-none d-sm-none d-md-none d-lg-none d-xl-flex">
                     <span><img src="assets/images/icons/ico-search.svg" height="24" width="24" alt="search"></span>
                 </div>
 
@@ -107,281 +124,334 @@
 
                 <div class="btn-general btn-general--gradient d-none d-sm-none d-md-none d-lg-none d-xl-flex">
                     Đăng nhập
-                    <span><img src="assets/images/icons/ico-login.svg" height="" width="" alt="login"></span>
+                    <span class="btn-general__icon"><img src="assets/images/icons/ico-login.svg" height="" width=""
+                            alt="login"></span>
                 </div>
             </div>
         </div>
     </header>
-
-    <script>
-        window.onscroll = function () { myFunction() };
-
-        function myFunction() {
-            if (window.pageYOffset > 0) {
-                $("#menu").removeClass("menu--transparent");
-            }
-            else {
-                $("#menu").addClass("menu--transparent");
-            }
-        }
-    </script>
     <!--#endregion-->
 
     <!--#region Body-->
     <div class="body">
-        <div class="reg-banner">
-            <div class="reg-banner__bg page--customer"></div>
+        <div class="gap-reg-80"></div>
 
-            <div class="container">
-                <ul class="breadcrumb-nav">
-                    <li><a href="/" aria-label="Trang chủ">Trang chủ</a></li>
-                    <li><a href="#" aria-label="Liên hệ">Liên hệ</a></li>
-                </ul>
+        <div class="container">
+            <ul class="breadcrumb-nav">
+                <li><a href="/" aria-label="Trang chủ">Trang chủ</a></li>
+                <li><a href="#" aria-label="Khóa học">Khóa học</a></li>
+            </ul>
+        </div>
 
-                <div class="reg-banner__box m-0 text-start">
-                    <div class="reg-banner__headline">
-                        Khách hàng của chúng tôi
+        <div class="container">
+            <div class="course-regis-box">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-9">
+                        <div class="course-regis-box__title">
+                            Frontend cơ bản cho người mới
+                        </div>
+                        <div class="course-regis-box__desc">
+                            Khóa học Frontend Cơ Bản của CyberUni sẽ giúp bạn nắm vững những kiến thức cơ bản
+                            về phát triển giao diện người dùng.
+                        </div>
                     </div>
-                    <div class="reg-banner__content">
-                        Chúng tôi tự hào về khả năng cung cấp nền tảng giáo dục trực tuyến tiên tiến, với đội ngũ chuyên
-                        gia giàu kinh nghiệm và công nghệ hiện đại.
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-3 course-regis-btn">
+                        <div class="btn-general btn-general--white m-0">
+                            Đăng ký ngay
+                        </div>
                     </div>
-                    <div class="">
-                        <div class="btn-general d-inline-block">Liên hệ ngay</div>
-                        <div class="btn-general d-inline-block">Xem demo</div>
+                </div>
+            </div>
+
+
+            <div class="row course-box">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-7">
+                    <div class="course-content">
+                        <div class="course-content__title">1, Giới thiệu chung</div>
+                        <div class="course-content__txt">Khóa học "Frontend Cơ Bản" của CyberUni cung cấp một nền tảng
+                            vững chắc cho những ai muốn bắt đầu học lập trình web. Với phương pháp giảng dạy hiện đại,
+                            đội ngũ giảng viên giàu kinh nghiệm và hỗ trợ học viên tận tình, chúng tôi cam kết mang đến
+                            trải nghiệm học tập tốt nhất và giúp bạn đạt được những kỹ năng cần thiết để phát triển sự
+                            nghiệp trong lĩnh vực công nghệ thông tin. Hãy đăng ký ngay hôm nay để khám phá và phát
+                            triển bản thân cùng CyberUni!
+                            4o
+                        </div>
+
+                        <div class="course-content__title">2, Mục tiêu Khóa Học</div>
+                        <div class="course-content__list">
+                            <li>Hiểu rõ các khái niệm cơ bản về phát triển frontend.</li>
+                            <li>Thành thạo trong việc sử dụng HTML để tạo cấu trúc cho trang web.</li>
+                            <li>Sử dụng CSS để tạo kiểu dáng và bố cục cho trang web.</li>
+                            <li>Sử dụng JavaScript để thêm tính năng tương tác cho trang web.</li>
+                        </div>
+
+                        <div class="course-content__title">3, Nội dung Khóa Học</div>
+                        <div class="course-content__sup">Buổi 1: Giới thiệu về Frontend</div>
+                        <div class="course-content__list">
+                            <li>Tổng quan về phát triển frontend.</li>
+                            <li>Công cụ và môi trường làm việc.</li>
+                        </div>
+                        <div class="course-content__sup">Buổi 2: HTML cơ bản</div>
+                        <div class="course-content__list">
+                            <li>Các thẻ HTML cơ bản.</li>
+                            <li>Tạo và quản lý các phần tử HTML.</li>
+                        </div>
+                        <div class="course-content__sup">Buổi 3: CSS Cơ Bản</div>
+                        <div class="course-content__list">
+                            <li>Nguyên lý cơ bản của CSS.</li>
+                            <li>Cách sử dụng CSS để tạo kiểu cho HTML.</li>
+                        </div>
+                        <div class="course-content__sup">Buổi 4: JavaScript Cơ Bản</div>
+                        <div class="course-content__list">
+                            <li>Ngôn ngữ lập trình JavaScript.</li>
+                            <li>Cách sử dụng JavaScript để tương tác với HTML và CSS.</li>
+                        </div>
+                        <div class="course-content__sup">Buổi 5: Dự án Cuối Khóa</div>
+                        <div class="course-content__list">
+                            <li>Xây dựng một trang web tĩnh hoàn chỉnh sử dụng HTML, CSS và JavaScript.</li>
+                        </div>
+
+                        <div class="course-content__title">4, Phương pháp Giảng dạy</div>
+                        <div class="course-content__sup">Mô tả phương pháp giảng dạy:</div>
+                        <div class="course-content__list">
+                            <li>Video bài giảng trực quan, dễ hiểu.</li>
+                            <li>Tài liệu đọc chi tiết, bổ trợ cho các bài giảng.</li>
+                            <li>Bài tập thực hành sau mỗi module để củng cố kiến thức.</li>
+                            <li>Bài kiểm tra đánh giá cuối mỗi module và cuối khóa học.</li>
+                        </div>
+                        <div class="course-content__sup">Công nghệ hỗ trợ học tập:</div>
+                        <div class="course-content__list">
+                            <li>Nền tảng học trực tuyến thân thiện với người dùng.</li>
+                            <li>Ứng dụng di động để học tập mọi lúc, mọi nơi.</li>
+                        </div>
+
+                        <div class="course-content__title">5, Thông tin giảng viên</div>
+                        <div class="course-content-mentor flex-align-center">
+                            <div class="course-content__avatar">
+                                <img src="assets/images/10-course-detail/avatar.jpg" alt="" height="" width="">
+                            </div>
+                            <div>
+                                <div class="course-content__name">Ths. Nguyễn Thanh Tùng</div>
+                                <div>Thạc sĩ Công nghệ thông tin với hơn 10 năm kinh nghiệm trong phát triển web, giảng
+                                    dạy tại nhiều trung tâm công nghệ hàng đầu.</div>
+                            </div>
+                        </div>
+
+                        <div class="course-content__title">6, Yêu Cầu Đầu Vào</div>
+                        <div class="course-content__list">
+                            <li>Kiến thức cơ bản về máy tính và Internet.</li>
+                            <li>Không yêu cầu kinh nghiệm lập trình trước.</li>
+                        </div>
+
+                        <div class="course-content__title">7, Lợi Ích Khi Tham Gia Khóa Học</div>
+                        <div class="course-content__list">
+                            <li>Nắm vững kiến thức cơ bản về phát triển frontend.</li>
+                            <li>Có khả năng xây dựng các trang web tĩnh cơ bản.</li>
+                            <li>Chuẩn bị tốt cho các khóa học nâng cao về phát triển web.</li>
+                            <li>Chứng chỉ hoàn thành khóa học từ CyberUni.</li>
+                        </div>
+
+                        <div class="course-content__title">8, Chứng Chỉ và Công Nhận</div>
+                        <div class="course-content__list">
+                            <li>Chứng chỉ hoàn thành khóa học do CyberUni cấp.</li>
+                            <li>Chứng chỉ được công nhận rộng rãi trong ngành công nghệ thông tin.</li>
+                        </div>
+
+                        <div class="course-content__title">9, Học Phí và Hình Thức Thanh Toán</div>
+                        <div class="course-content__sup">Chi tiết học phí:</div>
+                        <div class="course-content__list">
+                            <li class="course-content__sup">Học phí: 3.000.000 VND</li>
+                            <li>Giảm giá 10% cho học viên đăng ký trước ngày 31/07.</li>
+                        </div>
+                        <div class="course-content__sup">Phương thức thanh toán:</div>
+                        <div class="course-content__list">
+                            <li>Thẻ tín dụng (Visa, MasterCard).</li>
+                            <li>Chuyển khoản ngân hàng.</li>
+                            <li>Thanh toán trực tuyến qua ví điện tử.</li>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-5">
+                    <div class="course-info">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="course-info__title">Mức giá</div>
+                                <div class="course-info__content price">3.000.000 vnđ</div>
+                                <div class="course-info__title">Số lượng học viên</div>
+                                <div class="course-info__content">15 -20 người</div>
+                                <div class="course-info__title">Hình thức</div>
+                                <div class="course-info__content">Offline</div>
+                                <div class="course-info__title">Số buổi học</div>
+                                <div class="course-info__content">5 buổi</div>
+                            </div>
+                            <div class="col-6">
+                                <div class="course-info__title">Thời gian</div>
+                                <div class="course-info__content">19h30 - 21h30</div>
+                                <div class="course-info__title">Ngày học</div>
+                                <div class="course-info__content">Thứ 2, Thứ 6</div>
+                                <div class="course-info__title">Địa điểm</div>
+                                <div class="course-info__content">Cầu Giấy, Hà Nội</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
-
-
-
-
-        <div class="gap-reg-50"></div>
-        <div class="gap-reg-50"></div>
-
-
-        <div class="customer-steps container">
-            <div class="customer-headline">
-                CyberUni triển khai dự án như thế nào ?
-            </div>
-            <div class="row">
-                <div class="col-3">
-                    <div class="flex-center">
-                        <div class="customer-steps__box">
-                            <div class="customer-steps__no">01</div>
-                            <div class="customer-steps__title">Lập kế hoạch</div>
-                            <div class="customer-steps__content">Phân tích các yêu cầu cụ thể, lập kế hoạch chi tiết để
-                                đảm
-                                bảo mọi bước đi đều được thực
-                                hiện một cách khoa học và hiệu quả."
-                            </div>
-                            <div class="customer-steps__arrow">
-                                <img src="assets/images/6-customer/customer-connect-arow.svg" height="" width=""
-                                    alt="arrow">
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-3">
-                    <div class="flex-center">
-                        <div class="customer-steps__box">
-                            <div class="customer-steps__no">02</div>
-                            <div class="customer-steps__title">Lập kế hoạch</div>
-                            <div class="customer-steps__content">Phân tích các yêu cầu cụ thể, lập kế hoạch chi tiết để
-                                đảm
-                                bảo mọi bước đi đều được thực
-                                hiện một cách khoa học và hiệu quả."
-                            </div>
-                            <div class="customer-steps__arrow customer-steps__arrow--second">
-                                <img src="assets/images/6-customer/customer-connect-arow.svg" height="" width=""
-                                    alt="arrow">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="flex-center">
-                        <div class="customer-steps__box">
-                            <div class="customer-steps__no">03</div>
-                            <div class="customer-steps__title">Lập kế hoạch</div>
-                            <div class="customer-steps__content">Phân tích các yêu cầu cụ thể, lập kế hoạch chi tiết để
-                                đảm
-                                bảo mọi bước đi đều được thực
-                                hiện một cách khoa học và hiệu quả."
-                            </div>
-                            <div class="customer-steps__arrow customer-steps__arrow--third">
-                                <img src="assets/images/6-customer/customer-connect-arow.svg" height="" width=""
-                                    alt="arrow">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="flex-center">
-                        <div class="customer-steps__box">
-                            <div class="customer-steps__no">04</div>
-                            <div class="customer-steps__title">Lập kế hoạch</div>
-                            <div class="customer-steps__content">Phân tích các yêu cầu cụ thể, lập kế hoạch chi tiết để
-                                đảm
-                                bảo mọi bước đi đều được thực
-                                hiện một cách khoa học và hiệu quả."</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
 
         <div class="box-gap-reg"></div>
 
-
-        <div class="reg-story container">
-            <div class="customer-headline">Câu chuyện thành công mà chúng tôi đã cùng
-                các trường đại học tạo ra.</div>
-
-            <div class="row">
-                <div class="col-12">
-                    <div class="reg-story__box row">
-                        <div class="col-6">
-                            <img class="reg-story__image" src="assets/images/6-customer/screen-tabs.svg" height=""
-                                width="">
-                        </div>
-                        <div class="col-6">
-                            <div class="reg-story__content">
-                                <div class="reg-story__pre">Lĩnh vực</div>
-                                <div class="reg-story__title">Tên trường đại học</div>
-                                <div class="reg-story__content">
-                                    Những năm gần đây, ngành Dược chứng kiến thay đổi mạnh mẽ từ thị trường. Tác động từ
-                                    đại dịch COVID-19 tưởng chừng chỉ mang tính giai đoạn nhưng cũng tạo nên động lực
-                                    thúc đẩy ngành giáo dục chuyển mình bằng công nghệ.
-
-                                    Câu chuyện của Trường Đại học A cùng CyberUni gợi mở những kinh nghiệm và góc nhìn
-                                    toàn diện về chuyển đổi số trong ngành. Tạo nhiều cơ hội học tập cho học sinh, sinh
-                                    viên trong tương lai.
+        <div class="container course-comment">
+            <div class="course-comment__title">Học viên nói gì về chúng tôi</div>
+            <div class="comment-swiper position-relative">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="course-comment__box">
+                                <div class="course-comment__comment">“Lorem ipsum dolor sit amet consectetur. Sit
+                                    quam quis
+                                    donec
+                                    sit. Nulla felis nunc in sagittis
+                                    orci suspendisse.”</div>
+                                <div class="course-comment__user flex-align-center">
+                                    <div class="course-comment__image">
+                                        <img src="assets/images/10-course-detail/avatar.jpg" alt="" height="" width="">
+                                    </div>
+                                    <div class="">
+                                        <div class="course-comment__name">Name</div>
+                                        <div class="course-comment__company">Company name</div>
+                                    </div>
                                 </div>
-                                <a class="anchor__link" href="#">
-                                    Tìm hiểu thêm
-                                    <img src="assets/images/4-search/ico-link.svg" alt="" height="" width="">
-                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="course-comment__box">
+                                <div class="course-comment__comment">“Lorem ipsum dolor sit amet consectetur. Sit
+                                    quam quis
+                                    donec
+                                    sit. Nulla felis nunc in sagittis
+                                    orci suspendisse.”</div>
+                                <div class="course-comment__user flex-align-center">
+                                    <div class="course-comment__image">
+                                        <img src="assets/images/10-course-detail/avatar.jpg" alt="" height="" width="">
+                                    </div>
+                                    <div class="">
+                                        <div class="course-comment__name">Name</div>
+                                        <div class="course-comment__company">Company name</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="course-comment__box">
+                                <div class="course-comment__comment">“Lorem ipsum dolor sit amet consectetur. Sit
+                                    quam quis
+                                    donec
+                                    sit. Nulla felis nunc in sagittis
+                                    orci suspendisse.”</div>
+                                <div class="course-comment__user flex-align-center">
+                                    <div class="course-comment__image">
+                                        <img src="assets/images/10-course-detail/avatar.jpg" alt="" height="" width="">
+                                    </div>
+                                    <div class="">
+                                        <div class="course-comment__name">Name</div>
+                                        <div class="course-comment__company">Company name</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="course-comment__box">
+                                <div class="course-comment__comment">“Lorem ipsum dolor sit amet consectetur. Sit
+                                    quam quis
+                                    donec
+                                    sit. Nulla felis nunc in sagittis
+                                    orci suspendisse.”</div>
+                                <div class="course-comment__user flex-align-center">
+                                    <div class="course-comment__image">
+                                        <img src="assets/images/10-course-detail/avatar.jpg" alt="" height="" width="">
+                                    </div>
+                                    <div class="">
+                                        <div class="course-comment__name">Name</div>
+                                        <div class="course-comment__company">Company name</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="course-comment__box">
+                                <div class="course-comment__comment">“Lorem ipsum dolor sit amet consectetur. Sit
+                                    quam quis
+                                    donec
+                                    sit. Nulla felis nunc in sagittis
+                                    orci suspendisse.”</div>
+                                <div class="course-comment__user flex-align-center">
+                                    <div class="course-comment__image">
+                                        <img src="assets/images/10-course-detail/avatar.jpg" alt="" height="" width="">
+                                    </div>
+                                    <div class="">
+                                        <div class="course-comment__name">Name</div>
+                                        <div class="course-comment__company">Company name</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
                 </div>
             </div>
         </div>
+        <script>
+            let cmtSwiper = new Swiper('.comment-swiper .swiper-container', {
+                slidesPerView: 3,
+                spaceBetween: 24,
+                loop: false,
+                pagination: {
+                    el: '.comment-swiper .swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                breakpoints: {
+                    768: {
+                        slidesPerView: 1,
+                        spaceBetween: 24,
 
-
-        <div class="box-gap-reg"></div>
-
-
-        <div class="box-item container">
-            <div class="customer-headline">
-                Khóa học hiệu quả của chúng tôi
-            </div>
-            <div class="row">
-                <div class="col-4">
-                    <div class="box-item__item">
-                        <img class="box-item__image" src="assets/images/4-search/rect-1.jpg" alt="" height="" width="">
-                        <div class="box-item__category">Truyền thông</div>
-                        <div class="box-item__title">Khóa học truyền thông ngắn hạn</div>
-                        <a class="anchor__link" href="#">
-                            Khám phá ngay
-                            <img src="assets/images/4-search/ico-link.svg" alt="" height="" width="">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="box-item__item">
-                        <img class="box-item__image" src="assets/images/4-search/rect-2.jpg" alt="" height="" width="">
-                        <div class="box-item__category">Truyền thông</div>
-                        <div class="box-item__title">Khóa học truyền thông ngắn hạn</div>
-                        <a class="anchor__link" href="#">
-                            Khám phá ngay
-                            <img src="assets/images/4-search/ico-link.svg" alt="" height="" width="">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="box-item__item">
-                        <img class="box-item__image" src="assets/images/4-search/rect-3.jpg" alt="" height="" width="">
-                        <div class="box-item__category">Truyền thông</div>
-                        <div class="box-item__title">Khóa học truyền thông ngắn hạn</div>
-                        <a class="anchor__link" href="#">
-                            Khám phá ngay
-                            <img src="assets/images/4-search/ico-link.svg" alt="" height="" width="">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="box-item__item">
-                        <img class="box-item__image" src="assets/images/4-search/rect-1.jpg" alt="" height="" width="">
-                        <div class="box-item__category">Truyền thông</div>
-                        <div class="box-item__title">Khóa học truyền thông ngắn hạn</div>
-                        <a class="anchor__link" href="#">
-                            Khám phá ngay
-                            <img src="assets/images/4-search/ico-link.svg" alt="" height="" width="">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="box-item__item">
-                        <img class="box-item__image" src="assets/images/4-search/rect-2.jpg" alt="" height="" width="">
-                        <div class="box-item__category">Truyền thông</div>
-                        <div class="box-item__title">Khóa học truyền thông ngắn hạn</div>
-                        <a class="anchor__link" href="#">
-                            Khám phá ngay
-                            <img src="assets/images/4-search/ico-link.svg" alt="" height="" width="">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="box-item__item">
-                        <img class="box-item__image" src="assets/images/4-search/rect-3.jpg" alt="" height="" width="">
-                        <div class="box-item__category">Truyền thông</div>
-                        <div class="box-item__title">Khóa học truyền thông ngắn hạn</div>
-                        <a class="anchor__link" href="#">
-                            Khám phá ngay
-                            <img src="assets/images/4-search/ico-link.svg" alt="" height="" width="">
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="btn-general btn-general--gradient">Tìm hiểu thêm</div>
-        </div>
-
-
-
-
+                    },
+                    1200: {
+                        slidesPerView: 2,
+                        spaceBetween: 24,
+                    }
+                }
+            }
+            );
+        </script>
 
         <div class="box-gap-reg"></div>
-
-
-
-
 
         <div class="reg-register">
             <div class="reg-register__headline">
-                Đăng ký nhận dự án demo ngay hôm nay
+                Tìm hiểu khóa học ngay hôm nay
             </div>
 
             <form class="row">
-                <div class="col-6">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
                     <input class="reg-register__input" type="text" placeholder="Họ và tên *" />
                 </div>
 
-                <div class="col-6">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
                     <input class="reg-register__input" type="text" placeholder="Họ và tên *" />
                 </div>
 
-                <div class="col-6">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
                     <input class="reg-register__input" type="text" placeholder="Họ và tên *" />
                 </div>
 
-                <div class="col-6">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
                     <input class="reg-register__input" type="text" placeholder="Họ và tên *" />
                 </div>
 
@@ -405,27 +475,66 @@
     <!--#endregion-->
 
     <!--#region Footer-->
-    <!-- <div class="footer">
+    <div class="footer">
         <div class="container container--big">
             <div class="row">
-                <div class="col-3">
-                    1
+                <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 footer__block">
+                    <img class="footer__logo" src="assets/images/logo-default.svg" alt="" height="" width="">
+
+                    <div class="footer__content">
+                        <p>Công ty Cổ Phần Công Nghệ Sao Thiên Vương</p>
+                        <p>Số ĐKKD 0109681050 do Sở KHĐT Tp. Hà Nội
+                            cấp ngày 23/06/2021</p>
+                        <p>Địa chỉ: Số 186 phố Thúy Lĩnh,P. Lĩnh Nam, Q.
+                            Hoàng Mai, Tp. Hà Nội.</p>
+                    </div>
                 </div>
-                <div class="col-1">
-                    2
+                <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-2 footer__block">
+                    <div class="footer__title">Về chúng tôi</div>
+                    <a href="#" class="footer__content">Thông tin</a>
+                    <a href="#" class="footer__content">Hỗ trợ</a>
+                    <a href="#" class="footer__content">Cộng đồng</a>
+                    <a href="#" class="footer__content">Văn hóa</a>
                 </div>
-                <div class="col-2">
-                    3
+                <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-2 footer__block">
+                    <div class="footer__title">Công ty</div>
+                    <a href="#" class="footer__content">Thiết kế chương trình</a>
+                    <a href="#" class="footer__content">Phát triển học liệu</a>
+                    <a href="#" class="footer__content">Hệ thống công nghệ</a>
+                    <a href="#" class="footer__content">Vận hành dịch vụ</a>
                 </div>
-                <div class="col-3">
-                    4
+                <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 footer__block">
+                    <div class="footer__title">Chính sách và quy định</div>
+                    <a href="#" class="footer__content">Phương thức thanh toán</a>
+                    <a href="#" class="footer__content">Chính sách bảo mật thông tin</a>
+                    <a href="#" class="footer__content">Chính sách xử lý khiếu nại</a>
+                    <a href="#" class="footer__content">Giải đáp thắc mắc</a>
                 </div>
-                <div class="col-2">
-                    5
+                <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-2 footer__block">
+                    <div class="footer__title">Liên hệ</div>
+                    <a href="#" class="footer__content">
+                        <img class="footer__contact" src="assets/images/footer/ico-phone.svg" alt="" height="" width="">
+                        09876543210
+                    </a>
+                    <a href="#" class="footer__content">
+                        <img class="footer__contact" src="assets/images/footer/ico-envelope.svg" alt="" height=""
+                            width="">
+                        cyberunivn@gmail.com
+                    </a>
+                    <a href="#">
+                        <img class="footer__social" src="assets/images/footer/ico-fb.svg" alt="" height="" width="">
+                    </a>
+                    <a href="#">
+                        <img class="footer__social" src="assets/images/footer/ico-tiktok.svg" alt="" height="" width="">
+                    </a>
+                    <a href="#">
+                        <img class="footer__social" src="assets/images/footer/ico-linkedin.svg" alt="" height=""
+                            width="">
+                    </a>
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
     <!--#endregion-->
 
     <!--#region Using Google Translate-->
@@ -462,6 +571,38 @@
         });
 
         function goTrans() { $('#google_translate_element').attr('lang', $('html').attr('lang')); };
+    </script>
+    <script>
+        $('.select-quantity.q-web .plus').click(function () {
+            var total = 0;
+            var quan = $(this).parent().find('.quan').text();
+            if (quan < 20) {
+                quan = parseInt(quan) + 1;
+                $(this).parent().find('.quan').text(quan);
+                var maxAllowPurchase = $('#hfmaxAllowPurchase').val();
+
+                if (quan > maxAllowPurchase) {
+                    $('.p-sale span:first-child').text($('#hfDefaultPrice').val() + " đ");
+                    $('.p-sale .p-tag').text("-" + 36 + "%");
+                }
+            }
+            else {
+                alert("Bạn mua tối đa 20 sản phẩm. Nếu có nhu cầu mua số lượng lớn vui lòng liên hệ hotline 1900 2065")
+            }
+        });
+
+        $("body").on("click", ".select-quantity.q-web .subtract", function () {
+            var quan = $(this).parent().find('.quan').text();
+            if (quan > 1) {
+                quan = parseInt(quan) - 1;
+                $(this).parent().find('.quan').text(quan);
+                var maxAllowPurchase = $('#hfmaxAllowPurchase').val();
+                if (quan <= maxAllowPurchase) {
+                    $('.p-sale span:first-child').text($('#hfFSPrice').val() + " đ");
+                    $('.p-sale .p-tag').text("-" + 36 + "%");
+                }
+            }
+        });
     </script>
     <!--#endregion-->
 </body>

@@ -74,6 +74,9 @@
                 <a class="menu__item">
                     Đối tác
                 </a>
+                <a class="menu__item">
+                    Gó nhìn số
+                </a>
                 <a class="menu__item menu-about">
                     Về chúng tôi
                     <div class="extened-menu">
@@ -130,7 +133,8 @@
 
                 <div class="btn-general btn-general--gradient d-none d-sm-none d-md-none d-lg-none d-xl-flex">
                     Đăng nhập
-                    <span><img src="assets/images/icons/ico-login.svg" height="" width="" alt="login"></span>
+                    <span class="btn-general__icon"><img src="assets/images/icons/ico-login.svg" height="" width=""
+                            alt="login"></span>
                 </div>
             </div>
         </div>
@@ -142,12 +146,12 @@
         function myFunction() {
             if (window.pageYOffset > 0) {
                 $("#scroll-ico").attr("is-show", false);
-                $("#menu").addClass("menu--scroll");
+                $("#menu").addClass("menu--white");
 
             }
             else {
                 $("#scroll-ico").attr("is-show", true);
-                $("#menu").removeClass("menu--scroll");
+                $("#menu").removeClass("menu--white");
             }
         }
     </script>
