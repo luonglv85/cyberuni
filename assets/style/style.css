@@ -141,6 +141,10 @@ a {
     position: relative;
 }
 
+.anchor__link:hover {
+    opacity: 0.8;
+}
+
 .anchor__link img {
     position: absolute;
     top: 0;
@@ -1570,9 +1574,20 @@ a.contact-offline__detail {
     border: none;
 }
 
+.box-item__no.active:hover {
+    background: #067FED;
+    color: #fff;
+    opacity: 0.8;
+}
+
 .box-item__no {
     background: #fff;
     color: #6A7383;
+}
+
+.box-item__no:hover {
+    border-color: #067FED;
+    color: #067FED;
 }
 
 /* #endregion */
