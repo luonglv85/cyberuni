@@ -545,7 +545,7 @@ ul.breadcrumb-nav li a:hover {
 .footer {
     width: 100%;
     height: max-content;
-    padding: 100px;
+    padding: 60px 100px 30px 100px;
     background-color: #021221;
 }
 
@@ -828,6 +828,7 @@ ul.breadcrumb-nav li a:hover {
 
 .reg-benefits__box {
     margin-bottom: 35px;
+    align-items: start !important;
 }
 
 .reg-benefits__checkbox {
@@ -835,8 +836,7 @@ ul.breadcrumb-nav li a:hover {
     height: 20px;
     border-radius: 6px;
     background-color: #CDD0D6;
-    margin-right: 16px;
-    margin-top: -25px;
+    margin-top: 7px;
 }
 
 .reg-benefits_wrap{
@@ -1076,7 +1076,7 @@ ul.breadcrumb-nav li a:hover {
     font-size: 18px;
     font-weight: 500;
     line-height: 28.8px;
-    width: 888px;
+    width: 845px;
     margin: 0 auto 38px auto;
 }
 
