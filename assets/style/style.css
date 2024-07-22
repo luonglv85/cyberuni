@@ -839,6 +839,11 @@ ul.breadcrumb-nav li a:hover {
     margin-top: -25px;
 }
 
+.reg-benefits_wrap{
+    max-width: 550px;
+    margin: 0 auto;
+}
+
 .reg-benefits__headline {
     font-size: 23px;
     font-weight: 600;

@@ -837,6 +837,10 @@
         margin-top: -50px;
     }
 
+    .reg-benefits_wrap{
+        max-width: 100% !important;
+    }
+
     .reg-benefits__headline {
         font-size: 20px;
         line-height: 32px;
