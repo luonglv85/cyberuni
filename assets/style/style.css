@@ -840,7 +840,7 @@ ul.breadcrumb-nav li a:hover {
 }
 
 .reg-benefits_wrap{
-    max-width: 550px;
+    width: calc(100% - 100px);
     margin: 0 auto;
 }
 
