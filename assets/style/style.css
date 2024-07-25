@@ -612,7 +612,7 @@ ul.breadcrumb-nav li a:hover {
     width: 100%;
     height: 100vh;
     background: url(../images/1-home/banner.jpg) center center no-repeat;
-
+    background-repeat: no-repeat;background-size: cover;
     /* height: auto; */
     /* aspect-ratio: auto; */
 }
