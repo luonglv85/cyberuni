@@ -357,6 +357,10 @@
         margin-bottom: 50px;
     }
 
+    .strength-reasons__box {
+        aspect-ratio: 4 / 3;
+    }
+
     /* #endregion */
 
     /* #region Customer */
@@ -837,7 +841,7 @@
         margin-top: -50px;
     }
 
-    .reg-benefits_wrap{
+    .reg-benefits_wrap {
         max-width: 100% !important;
     }
 
@@ -963,7 +967,9 @@
     }
 
     .reg-banner__bg {
-        border-radius: 0 0 24px 24px;background-size: cover;background-attachment: unset;
+        border-radius: 0 0 24px 24px;
+        background-size: cover;
+        background-attachment: unset;
     }
 
     /* #endregion */
@@ -1048,7 +1054,7 @@
 
     /* #region Strength */
     .strength-reasons__box {
-        aspect-ratio: unset;
+        aspect-ratio: unset !important;
     }
 
     /* #endregion */
@@ -1166,4 +1172,10 @@
     }
 
     /* #endregion */
+}
+
+@media (max-width: 992px) {
+    .strength-reasons__box {
+        aspect-ratio: 1 / 1.2;
+    }
 }
