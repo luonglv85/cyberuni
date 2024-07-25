@@ -11,9 +11,10 @@
     <link rel="stylesheet" href="assets/style/style.css">
     <link rel="stylesheet" href="assets/style/fonts.css">
     <link rel="stylesheet" href="assets/style/reponsive.css" />
+    <link rel="stylesheet" href="assets/style/animation.css">
     <link rel="stylesheet" href="assets/plugins/bootstrap-5.3.3/bootstrap.min.css">
     <script src="assets/plugins/jquery/jquery-3.7.1.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <meta name="title" content="CYBERUNI" />
     <meta name="keywords" content="CYBERUNI" />
     <meta name="description" content="CYBERUNI">
@@ -190,7 +191,7 @@
             <img class="about-intro__bg-right" src="assets/images/2-about/rect-right.svg" alt="" height="" width="">
 
             <div class="container">
-                <div class="about-intro__headline">
+                <div class="about-intro__headline fade-in">
                     Về chúng tôi
                 </div>
                 <div class="about-intro__desc">
@@ -202,7 +203,7 @@
 
         <div class="box-gap-reg"></div>
 
-        <div class="container">
+        <div class="container reg_about">
             <!-- <div class="about-wwd row">
                 <div class="col-12 col-sm-12 col-md-4 col-lg-4 about-wwd__headline">Chúng tôi làm gì ?</div>
                 <div class="col-12 col-sm-12 col-md-8 col-lg-8 about-wwd__content">
@@ -463,6 +464,73 @@
                 }
             }
         });
+    </script>
+
+    <script>
+        var textWrapper = document.querySelector('.about-intro__desc');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+    anime.timeline()
+  .add({
+    targets: ".about-intro__desc .letter",
+    opacity: [0,1],
+    easing: "easeInOutQuad",
+    duration: 500,
+    delay: (el, i) => 50 * (i+1)
+  }).add({
+    targets: ".about-intro__desc",
+    opacity: 0,
+    duration: 10,
+    easing: "easeOutExpo",
+    delay: 200
+  }).add({
+        targets: ".about-intro__desc",
+        opacity: 1,
+        duration: 10,
+        easing: "easeOutExpo",
+        delay: 200
+      });
+
+      function checkScroll() {
+        var element_about = document.querySelector('.reg_about');
+        var mission_box = document.querySelectorAll('.about-misson__box');
+        var about_title = document.querySelector('.about-misson__headline')
+        var element_values = document.querySelector('.reg-values')
+        var reg_values_title = document.querySelector('.reg-values__headline')
+        var reg_values_box = document.querySelectorAll('.reg-values__box')
+        var rect = element_about.getBoundingClientRect();
+        var rectValues = element_values.getBoundingClientRect();
+        var windowHeight = (window.innerHeight || document.documentElement.clientHeight);
+  
+        if (rect.top <= windowHeight && rect.bottom >= 0) {
+            about_title.classList.add('fade-in')
+            mission_box[0].classList.add('fade-in-right')
+            mission_box[1].classList.add('fade-in-left')
+        }
+
+        if (rectValues.top <= windowHeight && rectValues.bottom >= 0) {
+            reg_values_title.classList.add('fade-in')
+  
+                reg_values_box[0].classList.add('fade-in-left')
+
+
+                reg_values_box[1].classList.add('fade-in-right')
+
+ 
+                reg_values_box[2].classList.add('fade-in-left')
+
+    
+                reg_values_box[3].classList.add('fade-in-right')
+        }
+  
+      }
+  
+      // Add scroll event listener
+      window.addEventListener('scroll', checkScroll);
+  
+      // Initial check in case the element is already in view
+      checkScroll();
+
     </script>
     <!--#endregion-->
 </body>

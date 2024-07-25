@@ -723,11 +723,14 @@ ul.breadcrumb-nav li a:hover {
     box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
     padding: 48px;
     margin: 0 auto;
+    transition: 0.3s all;
 }
 
 .reg-features__box:hover {
     opacity: 0.8;
+    transform: translateY(-20px);
     cursor: pointer;
+    transition: 0.3s all;   
 }
 
 .reg-features__box.reg-features__box--even {
@@ -2424,5 +2427,11 @@ body {
     color: transparent !important;
     pointer-events: none !important;
 }
+
+.banner__title .letter {
+    display: inline;
+    line-height: 1em;
+    text-align: justify;
+  }
 
 /* #endregion */

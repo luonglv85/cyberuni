@@ -11,8 +11,10 @@
     <link rel="stylesheet" href="assets/style/style.css">
     <link rel="stylesheet" href="assets/style/fonts.css">
     <link rel="stylesheet" href="assets/style/reponsive.css" />
+    <link rel="stylesheet" href="assets/style/animation.css">
     <link rel="stylesheet" href="assets/plugins/bootstrap-5.3.3/bootstrap.min.css">
     <script src="assets/plugins/jquery/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 
     <meta name="title" content="CYBERUNI" />
     <meta name="keywords" content="CYBERUNI" />
@@ -369,7 +371,7 @@
             </div>
         </div>
 
-        <div class="box-gap-reg"></div>
+        <!-- <div class="box-gap-reg"></div>
 
         <div class="reg-register">
             <div class="reg-register__headline">
@@ -406,7 +408,7 @@
                     <button class="btn-general btn-general--gradient w-100" type="submit">Submit</button>
                 </div>
             </form>
-        </div>
+        </div> -->
     </div>
 
     <div class="box-gap-reg"></div>
@@ -511,6 +513,32 @@
         });
 
         function goTrans() { $('#google_translate_element').attr('lang', $('html').attr('lang')); };
+    </script>
+
+    <script>
+
+function checkScroll() {
+        var element_regbenefit = document.querySelector('.reg-benefits');
+        var textTitleBenefit = document.querySelector('.reg-benefits__content-title')
+        var textBenefit = document.querySelectorAll('.reg-benefits_wrap')
+  
+        var rect_benefit = element_regbenefit.getBoundingClientRect();
+        var windowHeight = (window.innerHeight || document.documentElement.clientHeight);
+  
+        if(rect_benefit.top <= windowHeight && rect_benefit.bottom >= 0) {
+          textTitleBenefit.classList.add('fade-in');
+          textBenefit.forEach((item => {
+            item.classList.add('fade-in');
+          }));
+        }
+      }
+  
+      // Add scroll event listener
+      window.addEventListener('scroll', checkScroll);
+  
+      // Initial check in case the element is already in view
+      checkScroll();
+
     </script>
     <!--#endregion-->
 </body>

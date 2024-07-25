@@ -11,8 +11,10 @@
     <link rel="stylesheet" href="assets/style/style.css">
     <link rel="stylesheet" href="assets/style/fonts.css">
     <link rel="stylesheet" href="assets/style/reponsive.css" />
+    <link rel="stylesheet" href="assets/style/animation.css">
     <link rel="stylesheet" href="assets/plugins/bootstrap-5.3.3/bootstrap.min.css">
     <script src="assets/plugins/jquery/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 
     <meta name="title" content="CYBERUNI" />
     <meta name="keywords" content="CYBERUNI" />
@@ -216,7 +218,7 @@
 
                 <div class="gap-reg-10"></div>
 
-                <div class="btn-general btn-general--gradient float-start">
+                <div class="btn-general btn-general--gradient float-start fade-in">
                     Đăng ký dùng thử
                     <span class="btn-general__icon"><img src="assets/images/1-home/ico-list-checked.svg" height=""
                             width="" alt=""></span>
@@ -226,8 +228,8 @@
 
         <div class="box-gap-reg"></div>
 
-        <div class="container container--big reg-intro">
-            <div class="reg-intro__title">CyberUni là gì ?</div>
+        <div class="container container--big reg-intro ">
+            <div class="reg-intro__title ">CyberUni là gì ?</div>
             <div class="reg-intro__content">
                 <p>
                   
@@ -238,7 +240,7 @@ CyberUni là nền tảng đào tạo trực tuyến được phát triển bở
                     CyberUni luôn sẵn sàng đồng hành cùng các Trường Đại học, cao đẳng, các tổ chức giáo dục để mang lại các chương trình đào tạo đa dạng chất lượng cao, với độ phủ rộng khắp đến mọi đối tượng học viên nhằm giúp sinh viên trên mọi miền có cơ hội được tiếp cận với chương trình đào tạo mình mong muốn với hình thức học linh động, giảm chi phí và thời gian đi lại mà vẫn đảm bảo chất lượng đào tạo theo tiêu chuẩn!
                 </p>
             </div>
-            <div class="btn-general btn-general--gradient">
+            <div class="btn-general btn-general--gradient btn-findout ">
                 Tìm hiểu ngay
                 <span class="btn-general__icon"><img src="assets/images/icons/arr-r-w.svg" alt="arrow-icon" height="24"
                         width="24"></span>
@@ -628,8 +630,12 @@ CyberUni là nền tảng đào tạo trực tuyến được phát triển bở
         });
 
         function goTrans() { $('#google_translate_element').attr('lang', $('html').attr('lang')); };
+
     </script>
+    <script src="./assets/script/main.js"></script>
     <!--#endregion-->
+
+    
 </body>
 
 </html>

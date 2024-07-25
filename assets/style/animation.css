@@ -1,0 +1,19 @@
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(60px); }
+    100% { opacity: 1; transform: translateX(0px); }
+  }
+
+  @keyframes fadeInLeft {
+    0% { opacity: 0; transform: translateX(-100px); }
+    100% { opacity: 1; transform: translateX(0px); }
+  }
+  @keyframes fadeInRight {
+    0% { opacity: 0; transform: translateX(100px); }
+    100% { opacity: 1; transform: translateX(0px); }
+  }
+
+  .fade-in { opacity:1 !important;animation: fadeIn 2s; }
+
+  .fade-in-left{animation: fadeInLeft 2s;}
+
+  .fade-in-right{animation: fadeInRight 2s;}
