@@ -562,7 +562,7 @@ CyberUni là nền tảng đào tạo trực tuyến được phát triển bở
                     <a href="#" class="footer__content">Văn hóa</a>
                 </div>
                 <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-2 footer__block">
-                    <div class="footer__title">Công ty</div>
+                    <div class="footer__title">Dịch vụ</div>
                     <a href="#" class="footer__content">Thiết kế chương trình</a>
                     <a href="#" class="footer__content">Phát triển học liệu</a>
                     <a href="#" class="footer__content">Hệ thống công nghệ</a>
@@ -577,14 +577,14 @@ CyberUni là nền tảng đào tạo trực tuyến được phát triển bở
                 </div>
                 <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-2 footer__block">
                     <div class="footer__title">Liên hệ</div>
-                    <a href="#" class="footer__content">
+                    <a href="tel:0862595658" class="footer__content">
                         <img class="footer__contact" src="assets/images/footer/ico-phone.svg" alt="" height="" width="">
-                        09876543210
+                        0862595658
                     </a>
-                    <a href="#" class="footer__content">
+                    <a href="mailto:info@cyberuni.vn" class="footer__content">
                         <img class="footer__contact" src="assets/images/footer/ico-envelope.svg" alt="" height=""
                             width="">
-                        cyberunivn@gmail.com
+                            info@cyberuni.vn
                     </a>
                     <a href="#">
                         <img class="footer__social" src="assets/images/footer/ico-fb.svg" alt="" height="" width="">
@@ -603,6 +603,9 @@ CyberUni là nền tảng đào tạo trực tuyến được phát triển bở
     <!--#endregion-->
 
     <!--#region Using Google Translate-->
+
+    <script src="https://sp.zalo.me/plugins/sdk.js"></script>
+
     <script>
         var element = document.querySelector('html');
         const obsLang = new MutationObserver(function (mutations) {
@@ -636,6 +639,18 @@ CyberUni là nền tảng đào tạo trực tuyến được phát triển bở
         });
 
         function goTrans() { $('#google_translate_element').attr('lang', $('html').attr('lang')); };
+
+
+        window.onload = function() {
+            if (window.zalo) {
+                window.zalo.init({
+                    oaid: "0356384355",
+                    popup: false,
+                    width: 350,
+                    height: 450,
+                });
+            }
+        };
 
     </script>
     <script src="./assets/script/main.js"></script>
