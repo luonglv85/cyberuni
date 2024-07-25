@@ -585,6 +585,23 @@ ul.breadcrumb-nav li a:hover {
     display: block;
 }
 
+a.footer__content::before {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    content:"";
+    width: 8px;
+    height: 8px;
+    background: url('../images/footer/icon.png') center center no-repeat;
+    background-size: contain    ;
+    margin-right: 10px;
+    margin-bottom: 2px;
+}
+
+.footer__block:last-child a.footer__content::before{
+    display: none !important;
+}
+
 a.footer__content:hover{
     text-decoration: underline !important;
 }
