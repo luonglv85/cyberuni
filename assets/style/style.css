@@ -584,7 +584,8 @@ ul.breadcrumb-nav li a:hover {
     margin: 16px 0;
     display: block;
 }
-.footer__content:hover{
+
+a.footer__content:hover{
     text-decoration: underline !important;
 }
 
