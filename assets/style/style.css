@@ -950,9 +950,7 @@ a.footer__content:hover{
     cursor: pointer;
 }
 
-.reg-faq__container div:nth-last-child(2) {
-    border: none;
-}
+
 
 .reg-faq__question {
     width: calc(100% - 148px);
