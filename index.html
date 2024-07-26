@@ -27,45 +27,10 @@
 <meta property="og:url" content="https://cyberuni.vn/">
 
     <title>CYBERUNI</title>
-
-    <!--#region Google Transalte-->
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'vi',
-                layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL,
-                autoDisplay: false,
-                includedLanguages: 'en,vi,fr,ja,ko',
-                gaTrack: true,
-                gaId: 'AIzaSyAuk_NhmtJvsJXMB9PAy-jCSGv5sVhhxvM'
-            }, 'google_translate_element');
-        }
-    </script>
-    <script type="text/javascript"
-        src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async></script>
-    <!--#endregion-->
-
-    <!--#region Schema-->
-    <!-- <script type="application/ld+json">
-
-    </script> -->
-    <!--#endregion-->
 </head>
 
 <body>
     <div class="bg-main"></div>
-
-    <!--#region Button go top-->
-    <div id="btn-go-top" class="btn-go-top flex-center" onclick="goToTop();">
-        <span></span>
-    </div>
-
-    <script>
-        const goToTop = () => {
-            $("html, body").animate({ scrollTop: 0 }, 200);
-        }
-    </script>
-    <!--#endregion-->
 
     <!--#region Header-->
     <header class="menu menu--default flex-align-center" id="menu">
@@ -127,13 +92,68 @@
             </nav>
 
             <div class="menu__ops flex-align-center">
-                <!-- <div class="menu__search d-none d-sm-none d-md-flex d-lg-flex d-xl-flex">
+                <div class="menu__search d-none d-sm-none d-md-flex d-lg-flex d-xl-flex">
                     <span><img src="assets/images/icons/ico-search.svg" height="24" width="24" alt="search"></span>
                 </div>
 
-                <div class="language-box">
-                    <div id="google_translate_element" onclick="goTrans()"></div>
-                </div> -->
+                <!--#region Language Box-->
+                <div class="language-box" id="language-box">
+                    <div id="lang-bx" class="language-box__button flex-center" onclick="showOptions()">
+                        <img class="language-box__flag" src="assets/images/icons/flags/flag-vi.svg">
+                    </div>
+
+                    <div class="language-box__list" id="list-lang">
+                        <div class="language-box__item default selected" onclick="choseLanguage(this.id)" id="option-vi">
+                            <img class="language-box__flag" src="assets/images/icons/flags/flag-vi.svg">Vietnamese
+                        </div>
+
+                        <div class="language-box__borderline"></div>
+
+                        <div class="language-box__item" onclick="choseLanguage(this.id)" id="option-en">
+                            <img class="language-box__flag" src="assets/images/icons/flags/flag-us.svg">English
+                        </div>
+
+                        <div class="language-box__item" onclick="choseLanguage(this.id)" id="option-fr">
+                            <img class="language-box__flag" src="assets/images/icons/flags/flag-fr.svg">France
+                        </div>
+
+                        <div class="language-box__item" onclick="choseLanguage(this.id)" id="option-ja">
+                            <img class="language-box__flag" src="assets/images/icons/flags/flag-ja.svg">Japan
+                        </div>
+
+                        <div class="language-box__item" onclick="choseLanguage(this.id)" id="option-ko">
+                            <img class="language-box__flag" src="assets/images/icons/flags/flag-ko.svg">Korean
+                        </div>
+                    </div>
+
+                    <script>
+                        const showOptions = () => {
+                            $('#lang-bx').toggleClass("show");
+                            $('#list-lang').toggle();
+                        }
+
+                        const choseLanguage = (itemId) => {
+                            $('.language-box__item').each(function() {
+                                $(this).removeClass('selected');
+                            });
+                            $('#' + itemId).addClass('selected');
+                            document.getElementById('lang-bx').innerHTML = document.getElementById(itemId).innerHTML;
+
+                            //Translate
+                            //
+                        }
+
+                        document.addEventListener('click', function handleClickOutsideBox(event) {
+                            const boxLocation = document.getElementById('lang-bx');
+
+                            if (!boxLocation.contains(event.target)) {
+                                $('#lang-bx').removeClass("show");
+                                $('#list-lang').hide();
+                            }
+                        });
+                    </script>
+                </div>
+                <!--#endregion-->
 
                 <a href="./3-contact.html" class="btn-general menu__contact d-none d-sm-none d-md-none d-lg-none d-xl-block">
                     Liên hệ
