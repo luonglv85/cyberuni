@@ -610,6 +610,9 @@ ul.breadcrumb-nav li a:hover {
     display: block;
 }
 
+a.footer__content{
+    transition: 0.3s all;
+}
 a.footer__content::before {
     position: relative;
     display: inline-block;
@@ -628,7 +631,7 @@ a.footer__content::before {
 }
 
 a.footer__content:hover{
-    text-decoration: underline !important;
+    color: white;
 }
 
 .footer__contact {
