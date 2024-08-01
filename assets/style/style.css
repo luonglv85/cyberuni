@@ -2524,7 +2524,7 @@ div.customer-steps__box {
     display: block;
 }
 .content-steps::before{
-    border-bottom: 11px solid #fff;
+    border-bottom: 11px solid #d2efff;
     border-left: 11px solid transparent;
     border-right: 11px solid transparent;
     content: "";
