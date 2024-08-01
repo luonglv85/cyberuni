@@ -228,7 +228,7 @@
                 <div class="col-12 col-sm-12 col-md-3 col-lg-3">
                     <div class="flex-center">
                         <div class="customer-steps__box">
-                            <div class="customer-steps__no">01</div>
+                            <div class="customer-steps__no" onclick="$('.content-steps').removeClass('active');$('#step-1').addClass('active')" >01</div>
                             <div class="customer-steps__title">Thiết kế chương trình</div>
                             <div class="customer-steps__content">Hỗ trợ tư vấn, thiết kế chuyển đổi chương trình đào tạo trực tuyến cho các trường học, doanh nghiệp.
                             </div>
@@ -243,7 +243,7 @@
                 <div class="col-12 col-sm-12 col-md-3 col-lg-3">
                     <div class="flex-center">
                         <div class="customer-steps__box">
-                            <div class="customer-steps__no">02</div>
+                            <div class="customer-steps__no" onclick="$('.content-steps').removeClass('active');$('#step-2').addClass('active')">02</div>
                             <div class="customer-steps__title">Phát triển học liệu </div>
                             <div class="customer-steps__content">Thiết kế, xây dựng học liệu chuyển đổi từ Offline sang Online theo phương pháp học tập tiên tiến.
                             </div>
@@ -257,7 +257,7 @@
                 <div class="col-12 col-sm-12 col-md-3 col-lg-3">
                     <div class="flex-center">
                         <div class="customer-steps__box">
-                            <div class="customer-steps__no">03</div>
+                            <div class="customer-steps__no" onclick="$('.content-steps').removeClass('active');$('#step-3').addClass('active')">03</div>
                             <div class="customer-steps__title">Hệ thống công nghệ </div>
                             <div class="customer-steps__content">Hệ thống công nghệ trọn gói phục vụ đào tạo trực tuyến bằng công nghệ hiện đại.
                             </div>
@@ -271,11 +271,42 @@
                 <div class="col-12 col-sm-12 col-md-3 col-lg-3">
                     <div class="flex-center">
                         <div class="customer-steps__box">
-                            <div class="customer-steps__no">04</div>
+                            <div class="customer-steps__no" onclick="$('.content-steps').removeClass('active');$('#step-4').addClass('active')">04</div>
                             <div class="customer-steps__title">Vận hành dịch vụ </div>
                             <div class="customer-steps__content">Tư vấn xây dựng quy trình, cung cấp dịch vụ vận hành đào tạo trực tuyến nhanh chóng, dễ dàng, đem lại hiệu quả cao</div>
                         </div>
                     </div>
+                </div>
+            </div>
+            
+            <div class="row mt-5">
+                <div id="step-1" class="col-12 col-sm-12 col-md-12 content-steps active">
+                    <p><span><strong>Hỗ trợ xây dựng chương trình</strong></span></p>
+                    <p>CyberUni hỗ trợ tư vấn, xây dựng chuyển đổi chương trình đào tạo trực tuyến đảm bảo các yếu tố:</p>
+                       <p> - Đảm bảo chương trình học tập trực tuyến đúng với quy chế quy định của bộ giáo dục và của trường học.</p>
+                       <p> - Tối ưu quy trình đào tạo, không gây lãng phí thời gian và ngân sách của nhà trường, đem lại hiệu quả tối ưu cho người học.</p>
+                    <p>- Quá trình sử dụng, thao tác đơn giản; hệ thống hóa nhanh chóng giúp thầy cô và nhà trường tiếp cận dễ dàng và tiết kiệm thời gian.</p>
+                </div>
+                <div id="step-2" class="col-12 col-sm-12 col-md-12 content-steps">
+                    <p><span><strong>Phát triển học liệu</strong></span></p>
+                    <p>Dịch vụ thiết kế, xây dựng học liệu chuyển đổi từ Offline sang Online theo phương pháp học tập tiên tiến:</p>
+                       <p> - Nền tảng lớp học trực tuyến, theo nhóm nhỏ, tương tác đa chiều</p>
+                       <p> - Phương pháp hiện đại, trực quan giúp tập trung dễ dàng.</p>
+                    <p>- Sử dụng bài giảng đa phương tiện giàu tính tương tác.</p>
+                    <p>- Tình huống thảo luận môn học mang tính thực tiễn cao.</p>
+                </div>
+                <div id="step-3" class="col-12 col-sm-12 col-md-12 content-steps">
+                    <p><span><strong>Hệ thống công nghệ</strong></span></p>
+                    <p>Dịch vụ thiết kế, xây dựng hệ thống công nghệ trọn gói phục vụ đào tạo trực tuyến bằng công nghệ hiện đại đảm bảo hệ thống học trực tuyến vận hành hiệu quả nhất theo nhu cầu người học.</p>
+                </div>
+                <div id="step-4" class="col-12 col-sm-12 col-md-12 content-steps">
+                    <p><span><strong>Vận hành dịch vụ</strong></span></p>
+                    <p>Tư vấn xây dựng quy trình, cung cấp dịch vụ vận hành đào tạo trực tuyến giúp các trường học, doanh nghiệp triển khai chương trình đào tạo nhanh chóng, dễ dàng, tiết kiệm chi phí và đem lại hiệu quả cao.</p>
+                       <p> - Đội ngũ quản lý học tập hỗ trợ sinh viên trong suốt quá trình học tập.</p>
+                       <p> - Dịch vụ một cửa (Đầu mối dịch vụ duy nhất cho mọi vấn đề), dịch vụ hóa đơn điện tử (biên lai học phí điện tử) nhanh chóng, tiện lợi.</p>
+                    <p>- Lộ trình học tập cá nhân hóa, chi tiết, cụ thể.</p>
+                    <p>- Đội ngũ cán bộ lớp kết nối, hỗ trợ bạn học.</p>
+                    <p>- Hỗ trợ giải đáp 24/7.</p>
                 </div>
             </div>
         </div>
@@ -607,6 +638,7 @@
 
     <!--#region Using Google Translate-->
     <script>
+
         var element = document.querySelector('html');
         const obsLang = new MutationObserver(function (mutations) {
             mutations.forEach(function (mutation) {
