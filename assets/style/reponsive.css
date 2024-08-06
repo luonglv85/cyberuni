@@ -125,8 +125,7 @@
     .reg-benefits__checkbox {
         width: 18px;
         height: 18px;
-        margin-right: 12px;
-        margin-top: -43px;
+       
     }
 
     .reg-register {
@@ -724,7 +723,9 @@
     .menu {
         height: 64px;
     }
-
+    .customer-steps__arrow--third{
+        display: none !important;
+    }
     .menu-mb {
         height: 68px;
     }
@@ -837,8 +838,6 @@
         height: 15px;
         border-radius: 3px;
         background-color: #CDD0D6;
-        margin-right: 16px;
-        margin-top: -50px;
     }
 
     .reg-benefits_wrap {
@@ -1053,9 +1052,7 @@
     /* #endregion */
 
     /* #region Strength */
-    .strength-reasons__box {
-        aspect-ratio: unset !important;
-    }
+   
 
     /* #endregion */
 
@@ -1177,5 +1174,11 @@
 @media (max-width: 992px) {
     .strength-reasons__box {
         aspect-ratio: 1 / 1.2;
+    }
+}
+
+@media (max-width:475px){
+    .customer-steps__arrow{
+        display: none !important;
     }
 }

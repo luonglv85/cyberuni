@@ -1742,15 +1742,23 @@ div.customer-steps__box {
     aspect-ratio: auto;
     position: absolute;
     top: 20px;
-    right: calc(-50% + 70px);
+    right: calc(-50% + 80px);
+    rotate: -10deg;
 }
 
 .customer-steps__arrow--second {
-    rotate: -38deg;
+    rotate: -16deg;
+    right: calc(-50% + 12px);
 }
 
 .customer-steps__arrow--third {
     rotate: -10deg;
+    right: calc(-50% + 8px);
+}
+
+.customer-steps__arrow--four {
+    rotate: -10deg;
+    right: calc(-50% - 20px);
 }
 
 .customer-steps__no {
@@ -2541,13 +2549,16 @@ div.customer-steps__box {
     left: 10% !important;
 }
 .content-steps:nth-child(2)::before {
-    left: 36.5% !important;
+    left: 32.5% !important;
 }
 
 .content-steps:nth-child(3)::before {
-    left: 62% !important;
+    left: 49% !important;
 }
 .content-steps:nth-child(4)::before {
+    left: 66% !important;
+}
+.content-steps:nth-child(5)::before {
     left: 87% !important;
 }
 .content-steps p span{
